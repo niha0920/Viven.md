@@ -164,7 +164,6 @@ int add(int a, int b)
 4. Calls other functions as needed
 
 # Keywords, Identifiers, Variables and Constants
-Here’s a clear and interview-friendly explanation of **Keywords, Identifiers, Variables, and Constants in C**:
 ## 1. Keywords in C
 - **Keywords** are reserved words with predefined meanings.
 - You **cannot use them as names** for variables or functions.
