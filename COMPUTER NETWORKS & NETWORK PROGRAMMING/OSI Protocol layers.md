@@ -1,5 +1,5 @@
 # OSI Protocol layers
-The** OSI (Open Systems Interconnection) model** is a conceptual framework used to understand how data travels across a network. It divides communication into 7 layers, each with a specific function.
+The **OSI (Open Systems Interconnection) model** is a conceptual framework used to understand how data travels across a network. It divides communication into 7 layers, each with a specific function.
 ## OSI Model Layers (Top to Bottom)
 ### 1. Application Layer (Layer 7)
 - Closest to the end user
