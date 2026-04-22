@@ -137,3 +137,35 @@ When sending data over Wi-Fi or Ethernet:
 - Then sends it to the Physical layer for transmission
 
 # Network layer functionalities
+The **Network Layer** is responsible for **end-to-end delivery of packets across multiple networks**. It decides the **best path** for data to travel from source to destination.
+## Key Functionalities
+### 1. Logical Addressing (IP Addressing)
+- Assigns unique **IP addresses** to devices
+- Identifies source and destination across networks
+## 2. Routing (Path Determination)
+- Determines the **best route** for data transmission
+- Uses routing algorithms and routing tables
+## 3. Packet Forwarding
+- Moves packets from one router to another toward the destination
+- Uses **next-hop** information
+## 4. Fragmentation & Reassembly
+- Breaks large packets into smaller ones (fragmentation)
+- Reassembles them at the destination
+## 5. Internetworking
+- Connects different types of networks (LAN, WAN, etc.)
+- Enables communication across heterogeneous networks
+## 6. Congestion Control
+- Manages network traffic to avoid overload
+- May delay or drop packets when congestion occurs
+## 7. Error Handling & Diagnostics
+- Reports errors using protocols like ICMP
+- Helps in troubleshooting (e.g., ping)
+## Simple One-Line Definition
+Network Layer = "Handles routing and delivery of packets across networks"
+## Example
+When you send data to a website:
+- Network Layer:
+  - Adds IP address
+  - Chooses best route
+  - Sends packets through routers
+- Finally reaches the destination network
