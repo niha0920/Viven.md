@@ -97,3 +97,43 @@ When you send a message:
 - Sends through cable → receiver converts back to bits
 
 # Data link layer functionalities
+The **Data Link Layer** is responsible for **node-to-node delivery** of data and ensures that data is transferred **reliably between two directly connected devices**. It converts raw bits from the Physical layer into **frames**.
+## Key Functionalities
+### 1. Framing
+- Breaks data into manageable units called **frames**
+- Adds headers and trailers (like source/destination MAC address)
+## 2. Physical Addressing (MAC Addressing)
+- Uses **MAC addresses** to identify devices on the same network
+- Ensures correct delivery within a LAN
+## 3. Error Detection & Correction
+- Detects errors using techniques like **CRC (Cyclic Redundancy Check)**
+- May request retransmission if errors are found
+## 4. Flow Control
+- Controls the rate of data transmission
+- Prevents the receiver from being overwhelmed
+## 5. Access Control (Media Access Control)
+- Decides **who can use the communication medium** when multiple devices are connected
+- Example: CSMA/CD (Ethernet), CSMA/CA (Wi-Fi)
+## 6. Reliable Delivery (Optional)
+- Ensures frames are delivered correctly using acknowledgments and retransmissions
+## 7. Synchronization
+- Maintains proper sequencing of frames
+- Ensures sender and receiver stay in sync
+## 8. Link Management
+- Establishes, maintains, and terminates the link between nodes
+## Sublayers of Data Link Layer
+1. **MAC (Media Access Control) Layer**
+- Handles addressing and access control
+2. **LLC (Logical Link Control) Layer**
+- Handles flow control and error management
+## Simple One-Line Definition
+Data Link Layer = "Ensures reliable frame delivery between two directly connected devices"
+## Example
+When sending data over Wi-Fi or Ethernet:
+- Data Link Layer:
+  - Adds MAC address
+  - Creates frames
+  - Checks errors
+- Then sends it to the Physical layer for transmission
+
+# Network layer functionalities
