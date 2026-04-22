@@ -169,3 +169,82 @@ When you send data to a website:
   - Chooses best route
   - Sends packets through routers
 - Finally reaches the destination network
+
+# Transport layer functionalities
+The **Transport Layer** ensures **end-to-end communication** between devices. It provides **reliable or fast delivery**, depending on the protocol used.
+## Key Functionalities
+### 1. Segmentation & Reassembly
+- Breaks large data into smaller units called **segments**
+- Reassembles them at the destination in the correct order
+## 2. Service Point Addressing (Port Numbers)
+- Uses **port numbers** to identify specific applications
+- Example: Web (port 80), HTTPS (port 443)
+## 3. Connection Control
+- Establishes, maintains, and terminates connections
+- Types:
+  - Connection-oriented (e.g., TCP)
+  - Connectionless (e.g., UDP)
+## 4. Flow Control
+- Controls the rate of data transmission
+- Prevents receiver overload (e.g., sliding window mechanism)
+## 5. Error Control
+- Detects and corrects errors
+- Uses acknowledgments (ACKs) and retransmissions
+## 6. Reliable Data Transfer
+- Ensures data arrives:
+  - Without loss
+  - In correct order
+  - Without duplication
+## 7. Multiplexing & Demultiplexing
+- Combines data from multiple applications (sender side)
+- Separates them correctly at receiver side
+## Simple One-Line Definition
+Transport Layer = "Ensures reliable end-to-end delivery of data between applications"
+## Example
+When you open a website:
+- Transport Layer:
+  - Breaks data into segments
+  - Uses port number (e.g., 80/443)
+  - Ensures all data reaches correctly
+## Common Protocols
+- **TCP (Transmission Control Protocol)** → Reliable
+- **UDP (User Datagram Protocol)** → Fast but unreliable
+
+# Presentation layer functionalities
+The **Presentation Layer** acts as a **translator** between the application and the network. It ensures that data sent by one system is **understandable by another**, regardless of differences in format.
+## Key Functionalities
+### 1. Data Translation / Format Conversion
+- Converts data into a **standard format**
+- Handles differences in:
+  - Character encoding (ASCII, Unicode)
+  - Data formats (JSON, XML, etc.)
+## 2. Encryption & Decryption
+- Secures data during transmission
+- Encrypts data at sender and decrypts at receiver
+- Example: SSL/TLS
+## 3. Data Compression & Decompression
+- Reduces size of data to improve transmission speed
+- Decompresses data at the destination
+## 4. Character Encoding
+- Ensures correct interpretation of characters
+- Converts between encoding standards
+## 5. Data Formatting
+- Structures data in a way that the application layer can understand
+- Example: formatting images, audio, video
+## Simple One-Line Definition
+Presentation Layer = "Formats, encrypts, and compresses data for proper communication"
+## Example
+When you send a secure message:
+- Presentation Layer:
+  - Encrypts the message
+  - Compresses it
+  - Converts it into standard format
+- At receiver:
+  - Decrypts and decompresses
+## Examples
+- SSL/TLS (encryption)
+- JPEG, MP3, MPEG (data formats)
+- ASCII, Unicode (encoding)
+
+# Session layer functionalities
+The **Session Layer** is responsible for** establishing, managing, and terminating communication sessions** between applications. It ensures that communication stays organized and synchronized.
