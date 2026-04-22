@@ -46,3 +46,90 @@ A **multipoint** connection allows **multiple devices to share a single communic
 | Performance | High           | Lower       |
 | Cost        | High           | Low         |
 | Security    | More secure    | Less secure |
+
+# Network topologies
+**Network topology** refers to the **physical or logical arrangement of devices (nodes) and connections (links)** in a network. It defines how devices are connected and how data flows.
+## Types of Network Topologies
+## 1. Bus Topology
+### Description
+All devices are connected to a **single main cable (backbone)**.
+### Features
+- Data travels in both directions
+- Terminators are used at both ends
+- Simple design
+### Advantages
+- Easy to install
+- Low cost
+### Disadvantages
+- Backbone failure = entire network down
+- Difficult to troubleshoot
+- Performance drops with more devices
+## 2. Star Topology
+### Description
+All devices connect to a **central device** (hub/switch).
+### Features
+- Centralized control
+- Easy to add/remove devices
+### Advantages
+- Easy troubleshooting
+- Failure of one device doesn’t affect others
+### Disadvantages
+- Central device failure = network failure
+- More cabling required
+## 3. Ring Topology
+### Description
+Devices are connected in a **circular loop**.
+### Features
+- Data travels in one direction (or both in dual ring)
+- Uses token passing
+### Advantages
+- No data collision
+- Predictable performance
+### Disadvantages
+- Break in one link affects entire network
+- Difficult to reconfigure
+## 4. Mesh Topology
+### Description
+Each device is connected to **multiple or all other devices**.
+### Features
+- Redundant paths
+- High reliability
+### Advantages
+- Fault tolerant
+- No single point of failure
+### Disadvantages
+- Expensive
+- Complex installation
+## 5. Tree Topology
+### Description
+A **hierarchical combination of star and bus topologies**.
+### Features
+- Root node with branches
+- Scalable structure
+### Advantages
+- Easy expansion
+- Structured management
+### Disadvantages
+- Backbone failure affects segments
+- Complex setup
+## 6. Hybrid Topology
+### Description
+Combination of **two or more different topologies**.
+### Features
+- Flexible design
+- Used in large networks
+### Advantages
+- Highly scalable
+- Reliable
+### Disadvantages
+- Expensive
+- Complex design
+## Quick Comparison
+| Topology | Structure       | Main Advantage   | Main Disadvantage       |
+| -------- | --------------- | ---------------- | ----------------------- |
+| Bus      | Single cable    | Low cost         | Backbone failure        |
+| Star     | Central hub     | Easy management  | Hub failure             |
+| Ring     | Circular        | No collision     | One break stops network |
+| Mesh     | Fully connected | High reliability | Expensive               |
+| Tree     | Hierarchical    | Scalable         | Complex                 |
+| Hybrid   | Mixed           | Flexible         | Costly                  |
