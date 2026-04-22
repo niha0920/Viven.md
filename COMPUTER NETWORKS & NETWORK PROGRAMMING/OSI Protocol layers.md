@@ -247,4 +247,73 @@ When you send a secure message:
 - ASCII, Unicode (encoding)
 
 # Session layer functionalities
-The **Session Layer** is responsible for** establishing, managing, and terminating communication sessions** between applications. It ensures that communication stays organized and synchronized.
+The **Session Layer** is responsible for **establishing, managing, and terminating communication sessions** between applications. It ensures that communication stays organized and synchronized.
+## Key Functionalities
+### 1. Session Establishment, Maintenance & Termination
+- Creates a session between sender and receiver
+- Keeps it active during communication
+- Properly closes it after completion
+## 2. Dialog Control
+- Manages how data flows between devices
+- Supports:
+  - Half-duplex (one at a time)
+  - Full-duplex (both directions simultaneously)
+## 3. Synchronization (Checkpoints)
+- Inserts **checkpoints** in data streams
+- If failure occurs, resumes from last checkpoint instead of restarting
+## 4. Session Recovery
+- Restores sessions after interruptions or failures
+- Prevents complete data loss
+## 5. Token Management
+- Controls which device can transmit at a given time
+- Prevents data collision in communication
+## Simple One-Line Definition
+Session Layer = "Manages and controls communication sessions between devices"
+## Example
+While downloading a large file:
+- Session Layer:
+  - Maintains the session
+  - Adds checkpoints
+  - If connection drops → resumes from last checkpoint
+## Examples
+- NetBIOS
+- RPC (Remote Procedure Call)
+
+# Application layer functionalities
+The **Application Layer** is the **topmost layer** of the OSI model. It provides **network services directly to end users and applications**, acting as the interface between user applications and the network.
+## Key Functionalities
+### 1. Network Service Provision
+- Provides services like:
+  - Web browsing
+  - Email
+  - File transfer
+## 2. User Interface to Network
+- Acts as a bridge between user applications and network
+- Example: Web browser accessing a website
+## 3. File Transfer, Access & Management
+- Allows users to upload, download, and manage files
+- Example: FTP
+## 4. Email Services
+- Enables sending and receiving emails
+- Example: SMTP, POP3, IMAP
+## 5. Directory Services
+- Provides resource lookup and name resolution
+- Example: DNS
+## 6. Remote Access
+- Allows users to access remote systems
+- Example: Telnet, SSH
+## 7. Network Virtual Terminal
+- Enables remote login and command execution on another system
+## Simple One-Line Definition
+Application Layer = "Provides network services directly to end-user applications"
+## Example
+When you open a website:
+- Application Layer:
+  - Uses HTTP protocol
+  - Sends request to server
+  - Receives webpage data
+## Common Protocols
+- HTTP / HTTPS → Web browsing
+- FTP → File transfer
+- SMTP → Email sending
+- DNS → Domain name resolution
