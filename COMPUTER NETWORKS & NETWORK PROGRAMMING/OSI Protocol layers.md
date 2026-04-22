@@ -48,3 +48,52 @@ The **OSI (Open Systems Interconnection) model** is a conceptual framework used 
 | 1     | Physical     | Signal transmission        |
 
 # Physical layer functionalities
+The **Physical Layer** is the lowest layer of the OSI model. It is responsible for **transmitting raw bits (0s and 1s)** over a physical medium like cables or wireless signals.
+## Key Functionalities
+### 1. Bit Transmission
+- Converts data into **binary bits (0s and 1s)**
+- Sends these bits over the communication channel
+## 2. Physical Medium Definition
+- Defines the type of medium used:
+  - Copper cables
+  - Fiber optics
+  - Wireless signals
+## 3. Signal Encoding
+- Converts bits into signals:
+  - Electrical (copper wires)
+  - Optical (fiber cables)
+  - Radio waves (wireless)
+## 4. Data Rate Control
+- Determines the speed of data transmission (bits per second)
+- Example: 100 Mbps, 1 Gbps
+## 5. Bit Synchronization
+- Ensures sender and receiver are synchronized
+- Uses clock signals to match timing
+## 6. Line Configuration
+- Defines how devices are connected:
+  - Point-to-Point
+  - Multipoint
+## 7. Physical Topology
+- Defines network layout:
+  - Bus
+  - Star
+  - Ring
+  - Mesh
+## 8. Transmission Mode
+- Direction of data flow:
+  - Simplex (one-way)
+  - Half-duplex (both ways, one at a time)
+  - Full-duplex (both ways simultaneously)
+## 9. Interface & Hardware Specifications
+- Defines:
+  - Connectors
+  - Pin configurations
+  - Voltage levels
+## Simple One-Line Definition
+Physical layer = "Moves raw bits as signals through hardware"
+## Example
+When you send a message:
+- Physical layer converts your data → electrical signals
+- Sends through cable → receiver converts back to bits
+
+# Data link layer functionalities
