@@ -16,28 +16,13 @@ Changes in one layer do not affect others. For example, you can upgrade hardware
 Protocols and services in one layer can be reused across multiple applications (e.g., TCP is used by HTTP, FTP, etc.).
 ## 8. Encapsulation of Data
 Each layer adds its own header to data, helping in organized and secure transmission.
-## 
-9. Improved Maintenance
+## 9. Improved Maintenance
 Easier to update, debug, and manage because of clear separation of responsibilities.
-
-🔹 Example (Simple Flow)
-
-
-Application Layer → Sends request (e.g., web page request)
-
-
-Transport Layer → Breaks into segments
-
-
-Network Layer → Adds addressing (IP)
-
-
-Data Link Layer → Frames the data
-
-
-Physical Layer → Transmits bits
-
-
-
-🔹 Conclusion
-Layered architecture makes networking structured, scalable, and efficient. Without it, designing and managing communication systems would be extremely complex.
+## Example (Simple Flow)
+- Application Layer → Sends request (e.g., web page request)
+- Transport Layer → Breaks into segments
+- Network Layer → Adds addressing (IP)
+- Data Link Layer → Frames the data
+- Physical Layer → Transmits bits
+## Conclusion
+Layered architecture makes networking **structured, scalable, and efficient**. Without it, designing and managing communication systems would be extremely complex.
