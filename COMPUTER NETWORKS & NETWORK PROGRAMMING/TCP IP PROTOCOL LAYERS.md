@@ -409,3 +409,87 @@ High-speed LAN using **fiber optics**.
 | Token Ring | 802.5    | Twisted pair       | 4–16 Mbps          | Obsolete    |
 | Token Bus  | 802.4    | Coaxial            | ~10 Mbps           | Obsolete    |
 | FDDI       | —        | Fiber              | 100 Mbps           | Obsolete    |
+
+# Ethernet, Token Ring, Token bus, FDDI
+## 1. Ethernet (IEEE 802.3)
+### Overview
+The **most widely used LAN technology** today.
+### Working Principle
+- Uses **CSMA/CD (Carrier Sense Multiple Access with Collision Detection)**
+- Devices check if the medium is free before sending data
+### Features
+- Originally bus → now mostly **star topology (with switches)**
+- Speeds: **10 Mbps → 100 Mbps → 1 Gbps → 10+ Gbps**
+- Uses **MAC addresses**
+### Advantages
+- High speed and reliable
+- Low cost
+- Easy to install
+### Disadvantages
+- Collisions (in old hub-based networks)
+### Status
+- **Dominant LAN technology**
+## 2. Token Ring (IEEE 802.5)
+### Overview
+Developed by IBM, uses a **ring topology**.
+### Working Principle
+- Uses **token passing**
+- A special token circulates → only holder can transmit
+### Features
+- No collisions
+- Deterministic (predictable performance)
+- Speeds: **4 Mbps, 16 Mbps**
+### Advantages
+- Efficient under heavy load
+- No data collision
+### Disadvantages
+- Expensive
+- Failure of one node affects network
+### Status
+- **Obsolete**
+## 3. Token Bus (IEEE 802.4)
+### Overview
+A mix of **bus topology + token passing**.
+### Working Principle
+- Physically bus, but logically behaves like a ring
+- Token is passed in a predefined order
+### Features
+- Deterministic access
+- Used in industrial automation
+### Advantages
+- No collisions
+- Predictable communication
+### Disadvantages
+- Complex to manage
+- Limited flexibility
+### Status**
+- **Rarely used today
+## 4. FDDI (Fiber Distributed Data Interface)
+### Overview
+High-speed LAN using **fiber optic cables**.
+### Working Principle
+- Uses **token passing**
+- Dual ring system:
+  - Primary ring (data transmission)
+  - Secondary ring (backup)
+### Features
+- Speed: **100 Mbps**
+- Long-distance support
+- Fault tolerance (self-healing)
+### Advantages
+- Very reliable
+- High speed (for its time)
+### Disadvantages
+- Expensive
+- Complex setup
+### Status
+- **Replaced by modern Ethernet**
+## Comparison Table
+| Feature       | Ethernet        | Token Ring    | Token Bus          | FDDI           |
+| ------------- | --------------- | ------------- | ------------------ | -------------- |
+| IEEE Standard | 802.3           | 802.5         | 802.4              | ANSI (not 802) |
+| Topology      | Bus/Star        | Ring          | Bus (logical ring) | Dual Ring      |
+| Access Method | CSMA/CD         | Token Passing | Token Passing      | Token Passing  |
+| Speed         | Up to 100+ Gbps | 4–16 Mbps     | ~10 Mbps           | 100 Mbps       |
+| Media         | Copper/Fiber    | Twisted Pair  | Coaxial            | Fiber Optic    |
+| Status        | ✅ Active        | ❌ Obsolete    | ❌ Obsolete         | ❌ Obsolete     |
