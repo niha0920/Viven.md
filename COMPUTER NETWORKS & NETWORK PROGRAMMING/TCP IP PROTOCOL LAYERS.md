@@ -290,3 +290,56 @@ A **WAN (Wide Area Network)** spans **large geographic areas**, such as countrie
 - **LAN** → Local (small area)
 - **MAN** → Metropolitan (city)
 - **WAN** → Wide (global)
+
+# Typical media and Protocols used in each
+You’re usually expected to map **each network type (LAN, MAN, WAN)** to the **transmission media** and the **protocols/technologies** commonly used.
+## LAN (Local Area Network)
+### Typical Media
+- **Twisted Pair Cable (UTP/STP)** – most common (Cat5e, Cat6)
+- **Fiber Optic Cable** – used in high-speed LANs
+- **Wireless (Wi-Fi)** – radio waves
+### Protocols / Technologies
+- **Ethernet (IEEE 802.3**) – wired LAN standard
+- **Wi-Fi (IEEE 802.11)** – wireless LAN
+- **ARP (Address Resolution Protocol)**
+- **IP (Internet Protocol)**
+- **TCP/UDP**
+### Key Idea
+- High-speed, short distance → simple and fast technologies
+## MAN (Metropolitan Area Network)
+### Typical Media
+- **Fiber Optic Cabl**e – primary medium
+- **Microwave Links** – for wireless city connections
+- **Coaxial Cable** (older systems)
+### Protocols / Technologies
+- **Metro Ethernet**
+- **MPLS (Multiprotocol Label Switching)**
+- **ATM (Asynchronous Transfer Mode) (older)**
+- **Frame Relay** (legacy)
+### Key Idea
+- Connects multiple LANs across a city using high-capacity backbone
+## WAN (Wide Area Network)
+### Typical Media
+- **Fiber Optic (submarine cables, long-distance)**
+- **Satellite Communication**
+- **Leased Telephone Lines**
+- **Cellular Networks (4G/5G)**
+### Protocols / Technologies
+- **IP (Internet Protocol)**
+- **TCP/UDP**
+- **PPP (Point-to-Point Protocol)**
+- **HDLC (High-Level Data Link Control)**
+- **MPLS**
+- **BGP (Border Gateway Protocol)** – routing on the Internet
+### Key Idea
+- Long distance + global connectivity → complex routing and multiple technologies
+## Quick Comparison Table
+| Network | Media Used                 | Protocols / Technologies          |
+| ------- | -------------------------- | --------------------------------- |
+| **LAN** | Twisted pair, Fiber, Wi-Fi | Ethernet, Wi-Fi, ARP, IP, TCP/UDP |
+| **MAN** | Fiber, Microwave, Coaxial  | Metro Ethernet, MPLS, ATM         |
+| **WAN** | Fiber, Satellite, Cellular | IP, TCP/UDP, PPP, MPLS, BGP       |
+## Easy Way to Remember
+- **LAN** → Cables + Wi-Fi → Ethernet
+- **MAN** → Fiber city backbone → MPLS / Metro Ethernet
+- **WAN** → Global links → IP + routing protocols
