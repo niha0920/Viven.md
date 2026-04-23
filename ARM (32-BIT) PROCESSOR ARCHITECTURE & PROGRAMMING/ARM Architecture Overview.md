@@ -1,1 +1,1 @@
-
+The ARM is a 32-bit reduced instruction set computer (RISC) instruction set architecture (ISA) developed by ARM Holdings. It was known as the Advanced RISC Machine. The ARM architecture is the most widely used 32-bit ISA in terms of numbers produced. The relative simplicity of ARM processors made them suitable for low power applications. This has made them dominant in the mobile and embedded electronics market, as relatively low cost, and small microprocessors and microcontrollers.
