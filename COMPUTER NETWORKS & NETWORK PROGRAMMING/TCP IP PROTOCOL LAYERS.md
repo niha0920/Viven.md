@@ -133,3 +133,80 @@ Combination of **two or more different topologies**.
 | Mesh     | Fully connected | High reliability | Expensive               |
 | Tree     | Hierarchical    | Scalable         | Complex                 |
 | Hybrid   | Mixed           | Flexible         | Costly                  |
+
+# Networking and internetworking devices
+**Networking and internetworking devices** are hardware components used to **connect computers and networks**, enabling communication and data transfer.
+- **Networking devices** → connect devices **within the same network (LAN)**
+- **Internetworking devices** → connect **different networks (LAN ↔ WAN)**
+## Networking Devices (Within a Network)
+## 1. Repeater
+### Function
+Regenerates and amplifies weak signals.
+### Key Points
+- Works at **Physical Layer (OSI Layer 1)**
+- Extends transmission distance
+- No filtering or intelligence
+## 2. Hub
+### Function
+Connects multiple devices and **broadcasts data to all ports**.
+### Key Points
+- Also works at **Physical Layer**
+- No data filtering
+- Causes collisions
+## 3. Bridge
+### Function
+Connects two LAN segments and filters traffic.
+### Key Points
+- Works at **Data Link Layer (Layer 2)**
+- Uses **MAC addresses**
+- Reduces collisions
+## 4. Switch
+### Function
+Connects devices and sends data **only to the intended device**.
+### Key Points
+- Works at **Layer 2 (sometimes Layer 3)**
+- Uses MAC address table
+- Faster and more efficient than hub
+## Internetworking Devices (Between Networks)
+## 5. Router
+### Function
+Connects different networks and routes data packets.
+### Key Points
+- Works at **Network Layer (Layer 3)**
+- Uses **IP addresses**
+- Determines best path
+## 6. Gateway
+### Function
+Acts as a **protocol converter** between different networks.
+### Key Points
+- Works across **all OSI layers**
+- Connects dissimilar systems
+- Example: Email gateway
+## 7. Modem (Modulator-Demodulator)
+### Function
+Converts **digital signals ↔ analog signals**.
+### Key Points
+- Used for internet access
+- Example: DSL, Cable modem
+## 8. Access Point (AP)
+### Function
+Provides **wireless connectivity** to devices.
+### Key Points
+- Extends wired network to wireless
+- Used in Wi-Fi networks
+## Summary Table
+| Device       | Type            | OSI Layer  | Function                 |
+| ------------ | --------------- | ---------- | ------------------------ |
+| Repeater     | Networking      | Layer 1    | Signal regeneration      |
+| Hub          | Networking      | Layer 1    | Broadcast data           |
+| Bridge       | Networking      | Layer 2    | Filters traffic          |
+| Switch       | Networking      | Layer 2/3  | Intelligent forwarding   |
+| Router       | Internetworking | Layer 3    | Routing between networks |
+| Gateway      | Internetworking | All layers | Protocol conversion      |
+| Modem        | Internetworking | Layer 1    | Signal conversion        |
+| Access Point | Networking      | Layer 2    | Wireless access          |
+## Quick Understanding
+- **Same network?** → Use **Hub / Switch / Bridge**
+- **Different networks?** → Use **Router / Gateway**
+- **Wireless?** → Use **Access Point**
+- **Long distance signal?** → Use **Repeater**
