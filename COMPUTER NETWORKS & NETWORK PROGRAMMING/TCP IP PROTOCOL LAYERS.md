@@ -611,3 +611,39 @@ The **most commonly used Ethernet medium today**.
 **Ethernet frame formats** define how data is **encapsulated at the Data Link Layer (Layer 2)** before transmission. The two main formats you need to know are:
 - **Ethernet II (DIX)** – most widely used today
 - **IEEE 802.3 frame** – used with IEEE standards
+## 1. Ethernet II Frame (DIX Format)
+<img width="1440" height="526" alt="image" src="https://github.com/user-attachments/assets/855caad3-3df3-4d13-b11b-70ccf05da380" />
+
+### Structure
+| Field                       | Size          | Description              |
+| --------------------------- | ------------- | ------------------------ |
+| Preamble                    | 7 bytes       | Synchronization          |
+| SFD (Start Frame Delimiter) | 1 byte        | Start indicator          |
+| Destination MAC             | 6 bytes       | Receiver address         |
+| Source MAC                  | 6 bytes       | Sender address           |
+| **Type**                    | 2 bytes       | Protocol (IP, ARP, etc.) |
+| Data (Payload)              | 46–1500 bytes | Actual data              |
+| FCS                         | 4 bytes       | Error detection          |
+### Key Point
+- The **Type field identifies the upper-layer protocol** (e.g., IP, ARP)
+### Example
+- Type = 0x0800 → IP
+- Type = 0x0806 → ARP
+## 2. IEEE 802.3 Frame
+<img width="1920" height="1080" alt="image" src="https://github.com/user-attachments/assets/6c7f15ec-6b51-4250-818d-b1fdcec9f4a4" />
+
+### Structure
+| Field           | Size               | Description             |
+| --------------- | ------------------ | ----------------------- |
+| Preamble        | 7 bytes            | Synchronization         |
+| SFD             | 1 byte             | Start indicator         |
+| Destination MAC | 6 bytes            | Receiver                |
+| Source MAC      | 6 bytes            | Sender                  |
+| **Length**      | 2 bytes            | Length of data field    |
+| LLC Header      | 3 bytes            | Logical Link Control    |
+| SNAP Header     | 5 bytes (optional) | Protocol identification |
+| Data            | 46–1500 bytes      | Payload                 |
+| FCS             | 4 bytes            | Error detection         |
+### Key Point
+- Uses **Length field instead of Type**
+- Protocol is identified using **LLC/SNAP headers**
