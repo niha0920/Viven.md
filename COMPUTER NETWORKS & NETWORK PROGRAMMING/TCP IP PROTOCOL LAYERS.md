@@ -2,6 +2,8 @@
 **Line configurations** refer to the way communication devices are physically or logically connected using a communication link in a network. It defines how many devices can share a link and how they communicate.
 - There are **two main types of line configurations**:
 ## 1. Point-to-Point Line Configuration
+<img width="700" height="365" alt="image" src="https://github.com/user-attachments/assets/98d2ba0c-5b54-4c41-93f0-a42dd7d02a1d" />
+
 ### Definition
 A **point-to-point** connection provides a **dedicated link between two devices only**.
 ### Key Features
@@ -21,6 +23,8 @@ A **point-to-point** connection provides a **dedicated link between two devices 
 - Expensive if many devices need connections
 - Not scalable
 ## 2. Multipoint (Multidrop) Line Configuration
+<img width="941" height="439" alt="image" src="https://github.com/user-attachments/assets/75e2cd0d-212c-4bf5-89a8-15156f5774df" />
+
 ### Definition
 A **multipoint** connection allows **multiple devices to share a single communication link**.
 ### Key Features
@@ -51,6 +55,8 @@ A **multipoint** connection allows **multiple devices to share a single communic
 **Network topology** refers to the **physical or logical arrangement of devices (nodes) and connections (links)** in a network. It defines how devices are connected and how data flows.
 ## Types of Network Topologies
 ## 1. Bus Topology
+<img width="960" height="720" alt="image" src="https://github.com/user-attachments/assets/e966085c-fe06-4f64-a73d-00159448f87b" />
+
 ### Description
 All devices are connected to a **single main cable (backbone)**.
 ### Features
@@ -65,6 +71,8 @@ All devices are connected to a **single main cable (backbone)**.
 - Difficult to troubleshoot
 - Performance drops with more devices
 ## 2. Star Topology
+<img width="4449" height="3440" alt="image" src="https://github.com/user-attachments/assets/f1c7022e-7f56-45f6-96e3-1792992ace8d" />
+
 ### Description
 All devices connect to a **central device** (hub/switch).
 ### Features
@@ -77,6 +85,8 @@ All devices connect to a **central device** (hub/switch).
 - Central device failure = network failure
 - More cabling required
 ## 3. Ring Topology
+<img width="541" height="421" alt="image" src="https://github.com/user-attachments/assets/5b3f87a4-4fdc-492d-9888-44b611e338ee" />
+
 ### Description
 Devices are connected in a **circular loop**.
 ### Features
@@ -89,6 +99,8 @@ Devices are connected in a **circular loop**.
 - Break in one link affects entire network
 - Difficult to reconfigure
 ## 4. Mesh Topology
+<img width="768" height="549" alt="image" src="https://github.com/user-attachments/assets/350b5540-152b-4ce8-9f71-e643bfc8529f" />
+
 ### Description
 Each device is connected to **multiple or all other devices**.
 ### Features
@@ -101,6 +113,8 @@ Each device is connected to **multiple or all other devices**.
 - Expensive
 - Complex installation
 ## 5. Tree Topology
+<img width="700" height="400" alt="image" src="https://github.com/user-attachments/assets/441219f5-dee9-40b5-8bf4-fa34cf86146f" />
+
 ### Description
 A **hierarchical combination of star and bus topologies**.
 ### Features
@@ -113,6 +127,8 @@ A **hierarchical combination of star and bus topologies**.
 - Backbone failure affects segments
 - Complex setup
 ## 6. Hybrid Topology
+<img width="673" height="494" alt="image" src="https://github.com/user-attachments/assets/c2cf2a2c-fecd-41a0-b59b-72eeccf420a8" />
+
 ### Description
 Combination of **two or more different topologies**.
 ### Features
@@ -140,6 +156,8 @@ Combination of **two or more different topologies**.
 - **Internetworking devices** → connect **different networks (LAN ↔ WAN)**
 ## Networking Devices (Within a Network)
 ## 1. Repeater
+<img width="600" height="358" alt="image" src="https://github.com/user-attachments/assets/2f4b9620-6d2d-4f71-89ef-a3fdf3b7c0f9" />
+
 ### Function
 Regenerates and amplifies weak signals.
 ### Key Points
@@ -147,6 +165,8 @@ Regenerates and amplifies weak signals.
 - Extends transmission distance
 - No filtering or intelligence
 ## 2. Hub
+<img width="1639" height="1012" alt="image" src="https://github.com/user-attachments/assets/b9c923a5-659e-481a-91cf-f5392af953bb" />
+
 ### Function
 Connects multiple devices and **broadcasts data to all ports**.
 ### Key Points
@@ -154,6 +174,8 @@ Connects multiple devices and **broadcasts data to all ports**.
 - No data filtering
 - Causes collisions
 ## 3. Bridge
+<img width="708" height="532" alt="image" src="https://github.com/user-attachments/assets/b79bebe3-0aca-4da7-9500-88693af3a25d" />
+
 ### Function
 Connects two LAN segments and filters traffic.
 ### Key Points
@@ -161,6 +183,8 @@ Connects two LAN segments and filters traffic.
 - Uses **MAC addresses**
 - Reduces collisions
 ## 4. Switch
+<img width="1192" height="976" alt="image" src="https://github.com/user-attachments/assets/298b4b50-c56e-45b8-bd9e-2430348fd429" />
+
 ### Function
 Connects devices and sends data **only to the intended device**.
 ### Key Points
@@ -169,6 +193,8 @@ Connects devices and sends data **only to the intended device**.
 - Faster and more efficient than hub
 ## Internetworking Devices (Between Networks)
 ## 5. Router
+<img width="420" height="476" alt="image" src="https://github.com/user-attachments/assets/bf83c231-342d-4898-bea7-599fb6ef4a74" />
+
 ### Function
 Connects different networks and routes data packets.
 ### Key Points
@@ -176,6 +202,8 @@ Connects different networks and routes data packets.
 - Uses **IP addresses**
 - Determines best path
 ## 6. Gateway
+<img width="457" height="577" alt="image" src="https://github.com/user-attachments/assets/dffd6ad8-94da-4b03-9fd7-e5bdc071fa9f" />
+
 ### Function
 Acts as a **protocol converter** between different networks.
 ### Key Points
@@ -183,12 +211,17 @@ Acts as a **protocol converter** between different networks.
 - Connects dissimilar systems
 - Example: Email gateway
 ## 7. Modem (Modulator-Demodulator)
+<img width="998" height="558" alt="image" src="https://github.com/user-attachments/assets/7dc554c9-761e-446e-8714-c88108985475" />
+<img width="560" height="344" alt="image" src="https://github.com/user-attachments/assets/d31e3cc1-6154-4e3d-ab23-091979d16f6d" />
+
 ### Function
 Converts **digital signals ↔ analog signals**.
 ### Key Points
 - Used for internet access
 - Example: DSL, Cable modem
 ## 8. Access Point (AP)
+<img width="750" height="333" alt="image" src="https://github.com/user-attachments/assets/a23c61f2-7854-4ff8-b5e2-af6e237d0f22" />
+
 ### Function
 Provides **wireless connectivity** to devices.
 ### Key Points
@@ -214,6 +247,8 @@ Provides **wireless connectivity** to devices.
 # LAN, MAN, WAN
 **LAN, MAN, and WAN** are categories of computer networks based on their **geographical coverage, size, and purpose**.
 ## 1. Local Area Network (LAN)
+<img width="518" height="430" alt="image" src="https://github.com/user-attachments/assets/98e661a1-87cd-4c41-a50b-1505d13dd64e" />
+
 ### Definition
 A **LAN (Local Area Network)** connects devices within a **small geographic area** like a room, building, or campus.
 ### Examples
@@ -237,6 +272,8 @@ A **LAN (Local Area Network)** connects devices within a **small geographic area
 - Limited coverage
 - Requires maintenance
 ## 2. Metropolitan Area Network (MAN)
+<img width="913" height="736" alt="image" src="https://github.com/user-attachments/assets/90aa40d6-b5f3-47d1-b81d-30a15e92abaf" />
+
 ### Definition
 A **MAN (Metropolitan Area Network)** covers a **city or large town**.
 ### Examples
@@ -372,6 +409,8 @@ Standard for **wireless LAN (WLAN)**.
 ### Usage
 - Home Wi-Fi, public hotspots, enterprises
 ## 3. Token Ring – IEEE 802.5
+<img width="789" height="791" alt="image" src="https://github.com/user-attachments/assets/f5472223-4d79-445e-8031-65c4a4a328b7" />
+
 ### Overview
 Uses a **ring topology** with token passing.
 ### Key Features
@@ -381,6 +420,8 @@ Uses a **ring topology** with token passing.
 ### Status
 - Mostly **obsolete** (replaced by Ethernet)
 ## 4. Token Bus – IEEE 802.4
+<img width="938" height="428" alt="image" src="https://github.com/user-attachments/assets/d2ea83b2-8918-4c93-9d94-5d46c7c4a1ee" />
+
 ### Overview
 Combines **bus topology** with **token passing**.
 ### Key Features
@@ -391,6 +432,8 @@ Combines **bus topology** with **token passing**.
 ### Status
 - Rarely used today
 ## 5. FDDI (Fiber Distributed Data Interface)
+<img width="537" height="577" alt="image" src="https://github.com/user-attachments/assets/3d5c4783-3b1a-4ccb-95cd-dee361aa5e6f" />
+
 ### Overview
 High-speed LAN using **fiber optics**.
 ### Key Features
@@ -563,3 +606,8 @@ The **most commonly used Ethernet medium today**.
 | Cost         | High           | Medium        | Low                    |
 | Installation | Difficult      | Easier        | Very easy              |
 | Status       | Obsolete       | Obsolete      | Widely used            |
+
+# Ethernet frame formats
+**Ethernet frame formats** define how data is **encapsulated at the Data Link Layer (Layer 2)** before transmission. The two main formats you need to know are:
+- **Ethernet II (DIX)** – most widely used today
+- **IEEE 802.3 frame** – used with IEEE standards
