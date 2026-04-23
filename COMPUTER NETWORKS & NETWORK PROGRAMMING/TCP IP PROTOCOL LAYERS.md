@@ -647,3 +647,94 @@ The **most commonly used Ethernet medium today**.
 ### Key Point
 - Uses **Length field instead of Type**
 - Protocol is identified using **LLC/SNAP headers**
+
+# WAN Standards
+**WAN standards** define the **protocols and technologies used to communicate over long distances** (between cities, countries, or globally). These standards are developed by organizations like ITU-T, IEEE, and ISO.
+## Major WAN Standards
+## 1. PPP (Point-to-Point Protocol)
+<img width="395" height="628" alt="image" src="https://github.com/user-attachments/assets/2088366f-4348-4831-9132-8ca062c89603" />
+
+### Overview
+A protocol used for **direct communication between two nodes**.
+### Features
+- Works over serial links
+- Supports **authentication (PAP, CHAP)**
+- Error detection and encapsulation
+### Usage
+- Dial-up connections
+- Router-to-router links
+## 2. HDLC (High-Level Data Link Control)
+<img width="2048" height="1152" alt="image" src="https://github.com/user-attachments/assets/5562c818-6641-46ba-8ce5-76d1d872849d" />
+
+### Overview
+A **bit-oriented protocol** used for reliable data transfer.
+### Features
+- Works at **Data Link Layer**
+- Supports synchronous communication
+- Provides error detection
+### Usage
+- Leased line connections
+- Router communication
+## 3. Frame Relay
+### Overview
+A **packet-switched WAN technology** using virtual circuits.
+### Features
+- Uses **DLCI (Data Link Connection Identifier)**
+- Faster than older technologies
+- Minimal error checking
+### Usage
+- Enterprise WANs (earlier)
+### Status
+- Mostly obsolete
+## 4. ATM (Asynchronous Transfer Mode)
+### Overview
+High-speed switching technology using **fixed-size cells (53 bytes)**.
+### Features
+- Supports **QoS (Quality of Service)**
+- Used for voice, video, and data
+- Connection-oriented
+### Usage
+- Telecom backbone networks
+### Status
+- Rarely used now
+## 5. ISDN (Integrated Services Digital Network)
+### Overview
+Digital communication over telephone lines.
+### Features
+- Supports voice + data
+- Types:
+  - BRI (Basic Rate Interface)
+  - PRI (Primary Rate Interface)
+### Usage
+- Early digital telephony
+### Status
+- Obsolete
+## 6. MPLS (Multiprotocol Label Switching)
+### Overview
+Modern WAN technology for **fast packet forwarding using labels**.
+### Features
+- Uses **labels instead of IP lookup**
+- High performance
+- Supports QoS and traffic engineering
+### Usage
+- ISP backbone networks
+- Enterprise WANs
+## 7. SONET/SDH
+### Overview
+High-speed **fiber optic transmission standards**.
+### Features
+- Very high data rates
+- Ring topology with fault tolerance
+- Used in telecom infrastructure
+### Usage
+- Backbone networks
+## Summary Table
+| Standard    | Type              | Key Feature            | Status      |
+| ----------- | ----------------- | ---------------------- | ----------- |
+| PPP         | Point-to-point    | Authentication         | Active      |
+| HDLC        | Data link         | Reliable communication | Active      |
+| Frame Relay | Packet switching  | Virtual circuits       | Obsolete    |
+| ATM         | Cell switching    | Fixed 53-byte cells    | Rare        |
+| ISDN        | Digital telephony | Voice + data           | Obsolete    |
+| MPLS        | Label switching   | Fast routing           | Widely used |
+| SONET/SDH   | Optical fiber     | High-speed backbone    | Active      |
