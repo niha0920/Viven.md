@@ -492,4 +492,74 @@ High-speed LAN using **fiber optic cables**.
 | Access Method | CSMA/CD         | Token Passing | Token Passing      | Token Passing  |
 | Speed         | Up to 100+ Gbps | 4–16 Mbps     | ~10 Mbps           | 100 Mbps       |
 | Media         | Copper/Fiber    | Twisted Pair  | Coaxial            | Fiber Optic    |
-| Status        | ✅ Active        | ❌ Obsolete    | ❌ Obsolete         | ❌ Obsolete     |
+| Status        | Active          | Obsolete      | Obsolete           | Obsolete       |
+
+# Ethernet Media (Thick, Thin, Twisted pair)
+Ethernet has evolved through different **physical media types**. The classic ones you’re expected to know are **Thick Ethernet, Thin Ethernet, and Twisted Pair Ethernet**.
+## 1. Thick Ethernet (10BASE5)
+### Overview
+Also called **Thicknet**, it was the **earliest Ethernet medium**.
+### Media
+- Thick **coaxial cable** (yellow cable)
+- Uses external transceivers (vampire taps)
+### Characteristics
+- Speed: **10 Mbps**
+- Maximum length: **500 meters per segment**
+- Very robust and less signal loss
+### Advantages
+- Long distance support
+- Strong signal quality
+### Disadvantages
+- Expensive
+- Difficult to install
+- Not flexible
+### Status
+- **Obsolete**
+## 2. Thin Ethernet (10BASE2)
+### Overview
+Also called **Thinnet or Cheapernet**, a cheaper version of Thick Ethernet.
+### Media
+- Thin **coaxial cable (RG-58)**
+- Uses **BNC connectors and T-connectors**
+### Characteristics
+- Speed: **10 Mbps**
+- Maximum length: **185 meters per segment**
+- Bus topology
+### Advantages
+- Cheaper than Thick Ethernet
+- Easier to install
+### Disadvantages
+- Shorter distance
+- Cable break affects entire network
+### Status
+- **Obsolete**
+## 3. Twisted Pair Ethernet (10BASE-T and beyond)
+### Overview
+The **most commonly used Ethernet medium today**.
+### Media
+- **UTP (Unshielded Twisted Pair)**
+- **STP (Shielded Twisted Pair)**
+- Uses **RJ-45 connectors**
+### Characteristics
+- Speed: **10 Mbps → 100 Mbps → 1 Gbps → 10 Gbps+**
+- Maximum length: **100 meters per segment**
+- Uses **star topology (with switches)**
+### Advantages
+- Low cost
+- Easy installation
+- Flexible and scalable
+### Disadvantages
+- Limited distance compared to coaxial/fiber
+- More susceptible to interference (UTP)
+### Status
+- **Widely used**
+## Comparison Table
+| Feature      | Thick Ethernet | Thin Ethernet | Twisted Pair Ethernet  |
+| ------------ | -------------- | ------------- | ---------------------- |
+| Standard     | 10BASE5        | 10BASE2       | 10BASE-T and above     |
+| Cable Type   | Thick Coaxial  | Thin Coaxial  | Twisted Pair (UTP/STP) |
+| Speed        | 10 Mbps        | 10 Mbps       | Up to 10+ Gbps         |
+| Max Length   | 500 m          | 185 m         | 100 m                  |
+| Cost         | High           | Medium        | Low                    |
+| Installation | Difficult      | Easier        | Very easy              |
+| Status       | Obsolete       | Obsolete      | Widely used            |
