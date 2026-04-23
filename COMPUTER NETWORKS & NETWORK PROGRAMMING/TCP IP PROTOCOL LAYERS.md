@@ -343,3 +343,69 @@ You’re usually expected to map **each network type (LAN, MAN, WAN)** to the **
 - **LAN** → Cables + Wi-Fi → Ethernet
 - **MAN** → Fiber city backbone → MPLS / Metro Ethernet
 - **WAN** → Global links → IP + routing protocols
+
+# LAN Standards
+**LAN standards** define the **rules, formats, speeds, and media** used for communication within a Local Area Network. Most widely accepted LAN standards are developed by the IEEE under the **IEEE 802 series**.
+## Major LAN Standards (IEEE 802)
+## 1. Ethernet – IEEE 802.3
+### Overview
+The most widely used LAN standard for **wired networks**.
+### Key Features
+- Uses **CSMA/CD** (Collision Detection)
+- Works with **twisted pair & fiber cables**
+- High speed: 10 Mbps → 100 Mbps → 1 Gbps → 10+ Gbps
+### Variants
+- 10BASE-T (10 Mbps)
+- 100BASE-T (Fast Ethernet)
+- 1000BASE-T (Gigabit Ethernet)
+### Usage
+- Offices, homes, campus networks
+## 2. Wi-Fi – IEEE 802.11
+### Overview
+Standard for **wireless LAN (WLAN)**.
+### Key Features
+- Uses **radio waves**
+- Supports mobility
+- Operates in **2.4 GHz / 5 GHz / 6 GHz bands**
+### Variants
+- 802.11a/b/g/n/ac/ax (Wi-Fi 6, Wi-Fi 6E)
+### Usage
+- Home Wi-Fi, public hotspots, enterprises
+## 3. Token Ring – IEEE 802.5
+### Overview
+Uses a **ring topology** with token passing.
+### Key Features
+- No collisions
+- Controlled access using token
+- Speeds: 4 Mbps, 16 Mbps
+### Status
+- Mostly **obsolete** (replaced by Ethernet)
+## 4. Token Bus – IEEE 802.4
+### Overview
+Combines **bus topology** with **token passing**.
+### Key Features
+- Logical ring over physical bus
+- Deterministic access
+### Usage
+- Industrial environments
+### Status
+- Rarely used today
+## 5. FDDI (Fiber Distributed Data Interface)
+### Overview
+High-speed LAN using **fiber optics**.
+### Key Features
+- Dual ring topology (fault tolerance)
+- Speed: 100 Mbps
+- Token passing
+### Usage
+- Backbone networks (earlier)
+### Status
+- Replaced by modern Ethernet
+## Summary Table
+| Standard   | IEEE No. | Media              | Speed              | Status      |
+| ---------- | -------- | ------------------ | ------------------ | ----------- |
+| Ethernet   | 802.3    | Twisted pair/Fiber | Up to 100+ Gbps    | Widely used |
+| Wi-Fi      | 802.11   | Wireless           | Up to several Gbps | Widely used |
+| Token Ring | 802.5    | Twisted pair       | 4–16 Mbps          | Obsolete    |
+| Token Bus  | 802.4    | Coaxial            | ~10 Mbps           | Obsolete    |
+| FDDI       | —        | Fiber              | 100 Mbps           | Obsolete    |
