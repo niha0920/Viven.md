@@ -210,3 +210,83 @@ Provides **wireless connectivity** to devices.
 - **Different networks?** → Use **Router / Gateway**
 - **Wireless?** → Use **Access Point**
 - **Long distance signal?** → Use **Repeater**
+
+# LAN, MAN, WAN
+**LAN, MAN, and WAN** are categories of computer networks based on their **geographical coverage, size, and purpose**.
+## 1. Local Area Network (LAN)
+### Definition
+A **LAN (Local Area Network)** connects devices within a **small geographic area** like a room, building, or campus.
+### Examples
+- Home Wi-Fi network
+- Office network
+- Computer lab in a college
+### Characteristics
+- High speed (100 Mbps to several Gbps)
+- Low latency
+- Privately owned
+- Uses Ethernet or Wi-Fi
+### Devices Used
+- Switch
+- Router
+- Access Point
+### Advantages
+- Fast communication
+- Easy resource sharing (printers, files)
+- Low cost
+### Disadvantages
+- Limited coverage
+- Requires maintenance
+## 2. Metropolitan Area Network (MAN)
+### Definition
+A **MAN (Metropolitan Area Network)** covers a **city or large town**.
+### Examples
+- City-wide internet service
+- Cable TV network
+- Smart city infrastructure
+### Characteristics
+- Medium to high speed
+- Covers larger area than LAN
+- Usually managed by service providers
+### Technologies Used
+- Fiber optic cables
+- Microwave links
+### Advantages
+- Connects multiple LANs
+- High data transfer rates
+### Disadvantages
+- Expensive
+- Complex to manage
+## 3. Wide Area Network (WAN)
+### Definition
+A **WAN (Wide Area Network)** spans **large geographic areas**, such as countries or continents.
+### Examples
+- The Internet
+- Bank networks
+- Airline reservation systems
+### Characteristics
+- Slower than LAN (but improving with technology)
+- High latency compared to LAN
+- Uses public and private infrastructure
+### Technologies Used
+- Satellites
+- Leased lines
+- MPLS
+### Advantages
+- Global connectivity
+- Supports large-scale communication
+### Disadvantages
+- High cost
+- Complex setup and maintenance
+- Security concerns
+## Key Differences
+| Feature   | LAN                   | MAN            | WAN           |
+| --------- | --------------------- | -------------- | ------------- |
+| Coverage  | Small (room/building) | City           | Country/World |
+| Speed     | Very High             | High           | Moderate      |
+| Ownership | Private               | Public/Private | Mostly Public |
+| Cost      | Low                   | Medium         | High          |
+| Example   | Office network        | City network   | Internet      |
+## Quick Memory Trick
+- **LAN** → Local (small area)
+- **MAN** → Metropolitan (city)
+- **WAN** → Wide (global)
