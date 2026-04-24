@@ -372,3 +372,116 @@ for(int i = 0; i < 5; i++) {
 - `arr[i]` ↔ `*(arr + i)`
 - Arrays ≠ pointers (important difference)
 - Arrays passed to functions behave like pointers
+
+# Passing arrays to functions
+Passing arrays to functions in C is a key concept—and a bit tricky because arrays **decay into pointers** when passed. Let’s go step by step so it’s clear.
+## 1. Basic Idea
+When you pass an array to a function, you are actually passing the **address of its first element**.
+```c
+int arr[5] = {1, 2, 3, 4, 5};
+```
+Passing:
+```c
+func(arr);
+```
+- is equivalent to:
+```
+func(&arr[0]);
+```
+## 2. Function Declaration Ways
+All three below are **equivalent**:
+```c
+void func(int arr[]);
+void func(int arr[5]);
+void func(int *arr);
+```
+- Internally, all are treated as:
+```c
+void func(int *arr);
+```
+## 3. Example Program
+```c
+#include <stdio.h>
+void printArray(int arr[], int n) {
+    for(int i = 0; i < n; i++) {
+        printf("%d ", arr[i]);
+    }
+}
+int main() {
+    int arr[5] = {10, 20, 30, 40, 50};
+    printArray(arr, 5);
+    return 0;
+}
+```
+- Output:
+```
+10 20 30 40 50
+```
+## 4. Why Size Must Be Passed
+Inside the function, array size is **not known**.
+```c
+sizeof(arr)   // gives size of pointer, NOT array
+```
+- So always pass size explicitly:
+```c
+func(arr, size);
+```
+## 5. Modifying Array in Function
+Since we pass the address, changes reflect in the original array.
+### Example:
+```c
+#include <stdio.h>
+void modify(int arr[], int n) {
+    arr[0] = 100;
+}
+int main() {
+    int arr[3] = {1, 2, 3};
+    modify(arr, 3);
+    printf("%d", arr[0]);  // Output: 100
+}
+```
+- This is like **pass by reference behavior**
+## 6. Using Pointer Notation
+```c
+void func(int *arr, int n) {
+    for(int i = 0; i < n; i++) {
+        printf("%d ", *(arr + i));
+    }
+}
+```
+- Same as `arr[i]`
+## 7. Passing 2D Arrays
+Here, things are stricter.
+### Example:
+```c
+void func(int arr[][3], int rows);
+```
+- Column size must be specified
+## Example Program:
+```c
+#include <stdio.h>
+void print2D(int arr[][3], int rows) {
+    for(int i = 0; i < rows; i++) {
+        for(int j = 0; j < 3; j++) {
+            printf("%d ", arr[i][j]);
+        }
+        printf("\n");
+    }
+}
+int main() {
+    int arr[2][3] = {{1,2,3},{4,5,6}};
+    print2D(arr, 2);
+}
+```
+## 8. Common Mistake 
+```c
+void func(int arr[]) {
+    int size = sizeof(arr)/sizeof(arr[0]);  // WRONG
+}
+```
+- Because arr is treated as pointer
+## Quick Summary
+- Array → passed as pointer
+- `arr` ≡ `&arr[0]`
+- Must pass size
+- Changes reflect back
