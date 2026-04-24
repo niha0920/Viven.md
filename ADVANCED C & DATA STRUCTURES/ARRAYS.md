@@ -479,9 +479,118 @@ void func(int arr[]) {
     int size = sizeof(arr)/sizeof(arr[0]);  // WRONG
 }
 ```
-- Because arr is treated as pointer
+- Because `arr` is treated as pointer
 ## Quick Summary
 - Array → passed as pointer
 - `arr` ≡ `&arr[0]`
 - Must pass size
 - Changes reflect back
+
+# String handling and its library functions
+String handling in C revolves around **character arrays terminated by** `'\0'` and a rich set of helper functions from the standard library header string.h. Here’s a clear, exam-focused guide.
+## 1. What is a String in C?
+A string is:
+```c
+char str[] = "Hello";
+```
+- Internally stored as:
+```
+'H' 'e' 'l' 'l' 'o' '\0'
+```
+- `'\0'` (null terminator) marks the end of the string.
+## 2. Common String Operations
+- Finding length
+- Copying
+- Concatenation
+- Comparing
+- Searching
+### All are supported by functions in `<string.h>`.
+## 3. Important String Library Functions
+### 1. `strlen()` – Length of String
+```c
+#include <string.h>
+int len = strlen("Hello");  // 5
+```
+- Counts characters **excluding** `\0`
+### 2. `strcpy()` – Copy String
+```c
+char src[] = "Hello";
+char dest[10];
+strcpy(dest, src);
+```
+- Copies entire string (including `\0`)
+### 3. `strcat()` – Concatenate Strings
+```c
+char s1[20] = "Hello ";
+char s2[] = "World";
+strcat(s1, s2);
+```
+- Result: `"Hello World"`
+## 4. `strcmp()` – Compare Strings
+```c
+strcmp("abc", "abc");  // 0
+strcmp("abc", "abd");  // < 0
+strcmp("abd", "abc");  // > 0
+```
+- Returns:
+- `0` → equal
+- negative → first < second
+- positive → first > second
+## 5. `strchr()` – Find Character
+```c
+char *p = strchr("Hello", 'l');
+```
+- Returns pointer to first occurrence
+## 6. `strstr()` – Find Substring
+```c
+char *p = strstr("Hello World", "World");
+```
+- Returns pointer to substring
+## 4. Example Program
+```c
+#include <stdio.h>
+#include <string.h>
+int main() {
+    char s1[20] = "Hello";
+    char s2[] = " World";
+    strcat(s1, s2);
+    printf("Concatenated: %s\n", s1);
+    printf("Length: %lu\n", strlen(s1));
+    return 0;
+}
+```
+## 5. Input / Output of Strings
+### Input
+```c
+char str[20];
+scanf("%s", str);      // stops at space
+fgets(str, 20, stdin); // reads full line
+```
+### Output
+```c
+printf("%s", str);
+```
+## 6. Important Points 
+- Strings are **arrays of characters**
+- Must end with `'\0'`
+- Functions in `<string.h>` do **not check bounds**
+- Destination array must be large enough
+## 7. Common Mistakes 
+### Missing space for `\0`
+```c
+char str[5] = "Hello"; // WRONG
+```
+### Using `=` for strings
+```c
+str1 = str2; // INVALID
+```
+- Use `strcpy()` instead
+## 8. Useful Variants (Safer Functions)
+- `strncpy()` – limited copy
+- `strncat()` – limited concatenate
+- `strncmp()` – limited compare
+## Quick Summary
+- Strings = `char[] + '\0'`
+- Use `<string.h>` functions
+- `strlen`, `strcpy`, `strcat`, `strcmp` are most important
+- Always ensure enough memory
