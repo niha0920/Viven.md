@@ -793,3 +793,80 @@ A **Leased line** is a **dedicated, permanent connection** between two locations
 | Reliability | Low                   | High                   |
 | Usage       | Old home internet     | Businesses, ISPs       |
 | Line Type   | Telephone line        | Dedicated fiber/copper |
+
+# ISDN, DSL, PPP
+## 1. ISDN (Integrated Services Digital Network)
+### Definition
+**ISDN** is a digital communication technology that transmits **voice, data, and video over telephone lines**.
+### Types
+- **BRI (Basic Rate Interface)**
+  - 2B + 1D channels
+  - Each B = 64 kbps → Total = 144 kbps
+- **PRI (Primary Rate Interface)**
+  - 23B + 1D (US) / 30B + 1D (Europe)
+  - Much higher speed
+### Features
+- Digital (better than analog dial-up)
+- Faster call setup
+- Supports multiple services
+### Advantages
+- Better quality than dial-up
+- Simultaneous voice + data
+### Disadvantages
+- Expensive
+- Replaced by modern broadband
+### Status
+- **Obsolete**
+## 2. DSL (Digital Subscriber Line)
+### Definition
+**DSL** provides **high-speed internet over telephone lines** without blocking voice calls.
+### Types
+- **ADSL (Asymmetric DSL)** → Download > Upload
+- **VDSL (Very-high-bit-rate DSL)** → Faster speeds
+### Features
+- Always ON connection
+- Uses **different frequency bands** for voice & data
+- Requires DSL modem
+### Speed
+- From **Mbps to 100+ Mbps** (depends on type & distance)
+### Advantages
+- Faster than dial-up
+- Can use phone and internet together
+### Disadvantages
+- Speed decreases with distance
+- Limited availability in some areas
+### Status
+- Still used (but being replaced by fiber)
+## 3. PPP (Point-to-Point Protocol)
+### Definition
+**PPP** is a **data link layer protocol** used for communication between **two directly connected node**s.
+### Features
+- Encapsulation of network layer protocols (like IP)
+- Supports authentication:
+  - PAP (Password Authentication Protocol)
+  - CHAP (Challenge Handshake Authentication Protocol)
+- Error detection
+### Working Phases
+- Link establishment (LCP)
+- Authentication
+- Network layer configuration (NCP)
+### Usage
+- Dial-up connections
+- DSL connections
+- Router-to-router WAN links
+### Advantages
+- Reliable and secure
+- Supports multiple protocols
+### Disadvantages
+- Only point-to-point (not multi-point)
+### Status
+- **Widely used (especially in WAN links)**
+## Comparison Table
+| Feature    | ISDN                  | DSL                  | PPP                   |
+| ---------- | --------------------- | -------------------- | --------------------- |
+| Type       | Network technology    | Broadband technology | Protocol              |
+| Medium     | Telephone line        | Telephone line       | Works over many media |
+| Speed      | Up to Mbps            | Mbps to 100+ Mbps    | Depends on link       |
+| Connection | Dialed/Switched       | Always ON            | Point-to-point        |
+| Usage      | Old digital telephony | Home/office internet | WAN communication     |
+| Status     | Obsolete              | Active               | Active                |
