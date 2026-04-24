@@ -288,3 +288,87 @@ int main() {
 - **String** → char array + `\0`
 - Use `"Hello"` instead of manual initialization
 - Use `<string.h>` functions
+
+# Arrays and pointers
+Understanding the relationship between **arrays and pointers in C** is crucial—it’s one of the most tested and most misunderstood topics. Let’s break it down clearly and practically.
+## 1. Basic Idea
+In C, an **array name behaves like a pointer** to its first element.
+### Example:
+```c
+int arr[5] = {10, 20, 30, 40, 50};
+```
+- `arr` → address of `arr[0]`
+- So:
+```
+arr == &arr[0]
+```
+## 2. Accessing Elements (Two Ways)
+### Using Array Index
+```c
+arr[2]   // 30
+```
+### Using Pointer
+```c
+*(arr + 2)   // 30
+```
+- Both are **equivalent**
+## 3. Visual Understanding
+<img width="1000" height="500" alt="image" src="https://github.com/user-attachments/assets/71ca43bf-9293-4078-963d-9ed72e5554a6" />
+
+- Each step (`arr + 1`) moves by **size of data type**
+- If `int` = 4 bytes → next address jumps by 4 bytes
+## 4. Pointer Arithmetic
+```c
+int *p = arr;
+```
+| Expression | Meaning                  |
+| ---------- | ------------------------ |
+| `p`        | address of first element |
+| `p + 1`    | address of next element  |
+| `*(p + 1)` | value of next element    |
+## 5. Arrays as Function Arguments
+When you pass an array to a function, it behaves like a pointer.
+### Example:
+```c
+void printArray(int arr[], int n) {
+    for(int i = 0; i < n; i++) {
+        printf("%d ", arr[i]);
+    }
+}
+```
+- Internally treated as:
+```c
+void printArray(int *arr, int n);
+```
+## 6. Key Difference: Array vs Pointer
+| Feature    | Array                     | Pointer            |
+| ---------- | ------------------------- | ------------------ |
+| Memory     | Fixed size                | Can point anywhere |
+| Assignment | Not allowed (`arr = p`)   | Allowed            |
+| Increment  | Not allowed (`arr++`)     | Allowed            |
+## 7. Important Example
+```c
+int arr[3] = {10, 20, 30};
+int *p = arr;
+printf("%d\n", arr[1]);     // 20
+printf("%d\n", *(p + 1));   // 20
+```
+## 8. Special Case: `&arr`
+```c
+int arr[5];
+```
+- `arr` → pointer to first element → `int *`
+- `&arr` → pointer to whole array → `int (*)[5]`
+* Subtle but important difference in advanced C
+## 9. Pointer Traversal of Array
+```c
+int *p = arr;
+for(int i = 0; i < 5; i++) {
+    printf("%d ", *(p + i));
+}
+```
+## Quick Summary
+- Array name → pointer to first element
+- `arr[i]` ↔ `*(arr + i)`
+- Arrays ≠ pointers (important difference)
+- Arrays passed to functions behave like pointers
