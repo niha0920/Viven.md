@@ -194,3 +194,97 @@ int arr[2][3][4];
 - Access → `arr[i][j]`
 - Use nested loops
 - Stored in row-major order
+
+# Arrays of Characters and Strings
+Arrays of characters are how **strings** are handled in C. This is a very important topic because C does not have a built-in string type like some other languages.
+## 1. Character Arrays
+A **character array** is simply an array of char values.
+### Example:
+```c
+char name[5] = {'H', 'e', 'l', 'l', 'o'};
+```
+- This is **NOT a string** (no null character `\0`)
+- Just a collection of characters
+## 2. Strings in C
+A **string** is a character array that ends with a **null character** `\0`.
+### Example:
+```c
+char name[6] = {'H', 'e', 'l', 'l', 'o', '\0'};
+```
+- `\0` marks the **end of the string**
+## 3. String Initialization (Easy Way)
+Instead of writing `\0` manually:
+```c
+char name[] = "Hello";
+```
+- Compiler automatically adds `\0`
+- Size becomes **6 (5 + 1)**
+## 4. Memory Representation
+```
+Index:   0   1   2   3   4   5
+Value:  'H' 'e' 'l' 'l' 'o' '\0'
+```
+## 5. Accessing Characters
+```c
+char name[] = "Hello";
+printf("%c", name[0]);  // H
+printf("%c", name[1]);  // e
+```
+## 6. Input and Output of Strings
+### Using `scanf`
+```
+char name[20];
+scanf("%s", name);
+```
+- Stops at **space**
+### Using `fgets` (Better)
+```c
+char name[20];
+fgets(name, sizeof(name), stdin);
+```
+- Reads full line including spaces
+## Output using `printf`
+```c
+printf("%s", name);
+```
+## 7. Common String Functions
+From the string.h library:
+### `strlen()` → Length of string
+```c
+strlen(name);
+```
+### `strcpy()` → Copy string
+```c
+strcpy(dest, src);
+```
+### `strcat()` → Concatenate
+```c
+strcat(str1, str2);
+```
+### strcmp() → Compare
+```c
+strcmp(str1, str2);
+```
+## 8. Example Program
+```c
+#include <stdio.h>
+#include <string.h>
+int main() {
+    char name[20];
+    printf("Enter name: ");
+    fgets(name, sizeof(name), stdin);
+    printf("You entered: %s", name);
+    return 0;
+}
+```
+## 9. Difference: Character Array vs String
+| Feature   | Character Array | String          |
+| --------- | --------------- | --------------- |
+| Null `\0` | Not required    | Required        |
+| Meaning   | Just characters | Meaningful text |
+| Example   | `{'H','i'}`     | `"Hi"`          |
+## Quick Summary
+- **Character array** → collection of chars
+- **String** → char array + `\0`
+- Use `"Hello"` instead of manual initialization
+- Use `<string.h>` functions
