@@ -870,3 +870,60 @@ A **Leased line** is a **dedicated, permanent connection** between two locations
 | Connection | Dialed/Switched       | Always ON            | Point-to-point        |
 | Usage      | Old digital telephony | Home/office internet | WAN communication     |
 | Status     | Obsolete              | Active               | Active                |
+
+# ATM
+## ATM (Asynchronous Transfer Mode)
+### Definition
+**ATM (Asynchronous Transfer Mode)** is a **high-speed, connection-oriented WAN technology** that transmits data in **fixed-size cells of 53 bytes**.
+## ATM Cell Structure (Very Important)
+ATM Cell Size=53 bytes=5 (Header)+48 (Payload)
+### Cell Fields
+- **Header (5 bytes)** → routing and control information
+- **Payload (48 bytes)** → actual data
+#### Fixed size makes ATM fast and predictable
+## Key Features
+- **Connection-oriented** (virtual circuits required)
+- Uses **fixed-length cells (53 bytes)**
+- Supports **QoS (Quality of Service)**
+- Works for **voice, video, and data**
+- High speed (155 Mbps, 622 Mbps and more)
+## ATM Working
+1. Data is divided into **small fixed cells**
+2. Cells are transmitted through **virtual circuits**
+3. Each cell follows the **same predefined path**
+4. Reassembled at destination
+## Types of Connections
+- **PVC (Permanent Virtual Circuit)**
+  - Fixed path, always available
+- **SVC (Switched Virtual Circuit)**
+  - Established when needed
+## ATM Layers
+1. **ATM Adaptation Layer (AAL)**
+   - Converts data into ATM cells
+   - Types: AAL1, AAL2, AAL5
+2. **ATM Layer**
+   - Handles cell switching and routing
+3. **Physical Layer**
+   - Transmission over medium (fiber, etc.)
+## Advantages
+- High speed and efficiency
+- Low delay (good for real-time traffic)
+- Supports QoS
+- Handles multiple data types
+## Disadvantages
+- Complex technology
+- Expensive implementation
+- Fixed cell size → overhead for large data
+## ATM vs Packet Switching
+| Feature    | ATM              | Packet Switching (IP) |
+| ---------- | ---------------- | --------------------- |
+| Data Unit  | Fixed (53 bytes) | Variable size packets |
+| Speed      | High             | Moderate              |
+| QoS        | Strong           | Limited               |
+| Complexity | High             | Lower                 |
+## Status
+- ATM is **mostly obsolete today**
+- Replaced by:
+  - Ethernet
+  - MPLS
+  - IP-based networks
