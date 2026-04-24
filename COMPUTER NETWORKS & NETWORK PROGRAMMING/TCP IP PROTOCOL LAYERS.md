@@ -738,3 +738,58 @@ High-speed **fiber optic transmission standards**.
 | ISDN        | Digital telephony | Voice + data           | Obsolete    |
 | MPLS        | Label switching   | Fast routing           | Widely used |
 | SONET/SDH   | Optical fiber     | High-speed backbone    | Active      |
+
+# Dial-up, Leased Line
+## 1. Dial-up Connection
+<img width="1000" height="400" alt="image" src="https://github.com/user-attachments/assets/a5983efa-f715-4e45-b34c-4dc235841810" />
+
+### Definition
+A **Dial-up connection** uses a **telephone line** to connect to the Internet by dialing an ISP (Internet Service Provider).
+### Working
+- Computer connects to a **modem**
+- Modem dials ISP number
+- Converts **digital ↔ analog signals**
+### Features
+- Temporary connection (not always active)
+- Speed up to **56 kbps**
+- Uses **PSTN (Public Switched Telephone Network)**
+### Advantages
+- Low cost
+- Available in remote areas
+### Disadvantages
+- Very slow speed
+- Cannot use phone and internet simultaneously
+- Unstable connection
+### Status
+- **Obsolete**
+## 2. Leased Line Connection
+<img width="1536" height="724" alt="image" src="https://github.com/user-attachments/assets/f7c47b3b-5791-4863-af08-0c228a18b26c" />
+
+### Definition
+A **Leased line** is a **dedicated, permanent connection** between two locations or between a user and ISP.
+### Working
+- Direct connection using **fiber/copper line**
+- Always active (no dialing required)
+- Often uses protocols like **PPP or HDLC**
+### Features
+- High speed (Mbps to Gbps)
+- Dedicated bandwidth
+- Reliable and secure
+### Advantages
+- Stable and fast
+- No congestion (not shared)
+- Suitable for businesses
+### Disadvantages
+- Expensive
+- Requires installation
+### Status
+- **Widely used in enterprises**
+## Dial-up vs Leased Line
+| Feature     | Dial-up               | Leased Line            |
+| ----------- | --------------------- | ---------------------- |
+| Connection  | Temporary (dialing)   | Permanent (always on)  |
+| Speed       | Very slow (≤ 56 kbps) | High (Mbps–Gbps)       |
+| Cost        | Low                   | High                   |
+| Reliability | Low                   | High                   |
+| Usage       | Old home internet     | Businesses, ISPs       |
+| Line Type   | Telephone line        | Dedicated fiber/copper |
