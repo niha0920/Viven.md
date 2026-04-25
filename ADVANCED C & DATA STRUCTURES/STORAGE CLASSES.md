@@ -223,3 +223,168 @@ int x;  // automatically x = 0
 - **External linkage** = accessible across files
 - `extern` = used to access it in another file
 - **Lifetime** = entire program
+
+# Automatic
+## Automatic Variables in C
+**Automatic variables** are the default type of variables declared **inside a function or block**. They are also called **local variables**.
+- The keyword used is `auto` (but usually omitted because it is the default).
+## Definition
+An **automatic variable**:
+- Is declared inside a function/block
+- Is **created automatically** when the block starts
+- Is **destroyed automatically** when the block ends
+## Example
+```c
+#include <stdio.h>
+void func() {
+    auto int x = 10;   // automatic variable
+    printf("%d\n", x);
+}
+int main() {
+    func();
+    return 0;
+}
+```
+- `auto` keyword is optional:
+```c
+int x = 10;  // still an automatic variable
+```
+## Scope of Automatic Variables
+- Limited to the **block/function** where they are declared
+- Cannot be accessed outside that block
+```c
+void func() {
+    int x = 5;
+}
+int main() {
+    // printf("%d", x); ❌ Error: x not accessible
+}
+```
+## Lifetime of Automatic Variables
+- Created when function/block is entered
+- Destroyed when function/block exits
+* Stored in **stack memory**
+## Important Characteristics
+- Default storage class for local variables
+- Scope → Block level
+- Lifetime → Short (till function execution)
+- Initial value → **Garbage (undefined)** if not initialized
+```c
+void func() {
+    int x;
+    printf("%d", x);  // garbage value
+}
+```
+## Example Showing Lifetime
+```c
+#include <stdio.h>
+void counter() {
+    int count = 0;  // automatic variable
+    count++;
+    printf("%d\n", count);
+}
+int main() {
+    counter();
+    counter();
+    counter();
+}
+```
+- Output:
+```
+1
+1
+1
+```
+- Because `count` is recreated every time
+## Automatic vs Static Variable
+| Feature       | Automatic (`auto`) | Static         |
+| ------------- | ------------------ | -------------- |
+| Scope         | Block              | Block/File     |
+| Lifetime      | Till block ends    | Entire program |
+| Initial Value | Garbage            | Default = 0    |
+| Storage       | Stack              | Data segment   |
+## Key Point
+- **Automatic variables do NOT retain values between function calls**
+
+# Static
+## Static Variables in C
+A **static variable** is a variable that **retains its value between function calls** and has a **lifetime equal to the entire program execution**, even though its scope may be limited.
+- Declared using the keyword: `static`
+## Types of Static Variables
+### 1. Static Local Variable (inside a function)
+- Scope → **Only within the function**
+- Lifetime → **Entire program**
+- Value persists between function calls
+#### Example
+```c
+#include <stdio.h>
+void counter() {
+    static int count = 0;  // static local variable
+    count++;
+    printf("%d\n", count);
+}
+int main() {
+    counter();
+    counter();
+    counter();
+    return 0;
+}
+```
+- Output:
+```
+1
+2
+3
+```
+- Unlike automatic variables, it **does not reset**
+## 2. Static Global Variable (outside function)
+- Scope → **Only within the file (internal linkage)**
+- Lifetime → **Entire program**
+```c
+#include <stdio.h>
+static int x = 10;  // static global variable
+void show() {
+    printf("%d", x);
+}
+int main() {
+    show();
+    return 0;
+}
+```
+- Cannot be accessed from other files
+## Key Characteristics
+- Initialized only **once** (default value = 0)
+- Stored in **data segment (not stack)**
+- Retains value between function calls
+- Can be local (function-level) or global (file-level)
+## Static vs Automatic
+| Feature       | Static Variable | Automatic Variable |
+| ------------- | --------------- | ------------------ |
+| Scope         | Block/File      | Block              |
+| Lifetime      | Entire program  | Function execution |
+| Initial Value | Default = 0     | Garbage            |
+| Storage       | Data segment    | Stack              |
+| Value Retain  | Yes             | No                 |
+## Static vs Global
+| Feature | Static Global | Normal Global      |
+| ------- | ------------- | ------------------ |
+| Scope   | File only     | Across files       |
+| Linkage | Internal      | External           |
+| Keyword | `static`      | `extern` (for use) |
+## Key Concept
+**Static = long lifetime + restricted visibility (in some cases)**
+- Inside function → remembers value
+- Outside function → hides variable from other files
+## Common Use Cases
+- Counters
+- Caching values
+- Maintaining state across function calls
+- Data hiding in multi-file programs
+## Quick Summary
+- Declared using `static`
+- Initialized once
+- Lifetime = entire program
+- Value persists
+- Can limit visibility (internal linkage)
+
+# Register
