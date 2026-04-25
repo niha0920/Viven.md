@@ -150,3 +150,76 @@ int main() {
   - Encapsulation in C
   - Avoiding name conflicts between files
   - Writing modular programs
+
+# External/Global
+## External / Global Variables in C
+In C, **external variables** (also called **global variables**) are variables declared **outside all functions**. They have **global scope** and typically **external linkage**.
+## What is a Global Variable?
+A **global variable** is declared outside any function and can be accessed by all functions in the file.
+```c
+#include <stdio.h>
+int x = 100;  // global variable
+void show() {
+    printf("%d\n", x);
+}
+int main() {
+    show();
+    printf("%d", x);
+    return 0;
+}
+- Accessible everywhere in the same file
+- Default linkage: **external linkage**
+## External Linkage
+When a global variable has **external linkage**, it can be accessed **from other files** using the `extern` keyword.
+## Example (Multiple Files Concept)
+### File1.c
+```c
+int x = 50;  // definition of global variable
+```
+### File2.c
+```c
+#include <stdio.h>
+extern int x;  // declaration (not definition)
+int main() {
+    printf("%d", x);
+    return 0;
+}
+```
+- `extern` tells the compiler:
+#### “The variable is defined in another file”
+## Key Properties
+### Scope
+- Entire file (from declaration onward)
+- Can extend to other files using `extern`
+### Lifetime
+- Exists for the **entire program execution**
+## Important Points
+### 1. Declaration vs Definition
+- `int x;` → declaration (can also be definition depending on context)
+- `extern int x;` → declaration only
+- `int x = 10;` → definition
+## 2. Default Initialization
+- Global variables are automatically initialized to **0**
+```c
+int x;  // automatically x = 0
+```
+## 3. Name Conflict
+- Two global variables with same name in different files → conflict (unless `static` is used)
+## Global vs Local Variable
+| Feature       | Global Variable     | Local Variable     |
+| ------------- | ------------------- | ------------------ |
+| Declaration   | Outside functions   | Inside functions   |
+| Scope         | Entire program/file | Inside block only  |
+| Lifetime      | Entire program      | Function execution |
+| Default Value | 0                   | Garbage value      |
+## Key Difference: Internal vs External
+| Feature    | Internal (`static`) | External (`global`)   |
+| ---------- | ------------------- | --------------------- |
+| Visibility | Same file only      | Across files          |
+| Linkage    | Internal linkage    | External linkage      |
+| Keyword    | `static`            | `extern` (for access) |
+## Quick Summary
+- **Global variable** = declared outside functions
+- **External linkage** = accessible across files
+- `extern` = used to access it in another file
+- **Lifetime** = entire program
