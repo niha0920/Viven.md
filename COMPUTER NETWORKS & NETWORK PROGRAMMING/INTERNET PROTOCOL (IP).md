@@ -199,3 +199,63 @@ Used **between networks**:
 ## Routing vs Forwarding
 - **Routing** → Decides path (control plane)
 - **Forwarding** → Sends packet to next hop (data plane)
+
+# Autonomous systems
+## Autonomous Systems (AS) in Computer Networks
+An **Autonomous System (AS)** is a collection of IP networks and routers under a **single administrative control** that follow a common routing policy.
+### In simple terms:
+A large network (like an ISP or organization) managed by one entity.
+## Real-World Idea
+- Each ISP (like Airtel, Jio) is an **Autonomous System**
+- Big companies (Google, Amazon) also have their own AS
+- The entire Internet = **many AS connected together**
+## How Autonomous Systems Work
+- Each AS has:
+  - Its own routers
+  - Internal routing protocol
+- AS communicate with each other using special protocols
+## Autonomous System Number (ASN)
+- Every AS has a unique **ASN (Autonomous System Number)**
+- Used to identify AS on the Internet
+### Example:
+- AS15169 → Google
+- AS16509 → Amazon
+## Types of Autonomous Systems
+### 1. Stub AS
+- Connected to only **one other AS**
+- No transit traffic
+* Example: Small organization network
+## 2. Multihomed AS
+- Connected to **multiple AS**
+- Does not allow transit traffic
+* Improves reliability
+## 3. Transit AS
+- Connected to multiple AS
+- Allows traffic to pass through
+* Example: Internet Service Providers (ISPs)
+## Routing Inside vs Between AS
+### Intra-AS Routing (Within AS)
+- Uses **Interior Gateway Protocols (IGP)**
+  - RIP
+  - OSPF
+  - EIGRP
+## Inter-AS Routing (Between AS)
+- Uses **Exterior Gateway Protocol (EGP)**
+### Most important protocol:
+- **BGP (Border Gateway Protocol)**
+## Role of BGP
+- Connects different AS
+- Decides best path based on:
+  - Policies
+  - Path length
+  - Network rules
+* BGP is the **backbone of the Internet**
+## Key Components
+- **Border Routers (Edge Routers)**
+  - Connect one AS to another
+- **AS Path**
+  - List of AS numbers a packet travels through
+## Example Flow
+1. Data leaves your ISP (AS1)
+2. Travels through multiple AS (AS2, AS3)
+3. Reaches destination AS
