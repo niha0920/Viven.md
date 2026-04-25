@@ -388,3 +388,64 @@ int main() {
 - Can limit visibility (internal linkage)
 
 # Register
+## Register Variables in C
+A **register variable** is a local variable that the compiler is requested to store in a **CPU register** instead of memory for **faster access**.
+- Declared using the keyword: `register`
+## Definition
+A register variable:
+- Is usually stored in a **CPU registe**r (if available)
+- Has **block (local) scope**
+- Has **automatic lifetime** (like local variables)
+## Example
+```c
+#include <stdio.h>
+int main() {
+    register int i;
+    for(i = 0; i < 5; i++) {
+        printf("%d ", i);
+    }
+    return 0;
+}
+```
+## Key Characteristics
+- Faster access than normal variables (stored in CPU register)
+- Scope → **Local (block scope)**
+- Lifetime → **Till block execution ends**
+- Default initial value → **Garbage (undefined)**
+## Important Rules
+### 1. Cannot Use Address Operator (`&`)
+```c
+register int x = 10;
+printf("%p", &x);  // ❌ Error
+```
+- Because it may not have a memory address
+## 2. Compiler May Ignore It
+- `register` is only a **request**, not a command
+- If registers are unavailable, it behaves like a normal variable
+## 3. Used for Frequently Accessed Variables
+```c
+for(register int i = 0; i < n; i++) {
+    // loop operations
+}
+```
+- Common in loops and counters
+## Register vs Automatic Variable
+| Feature       | Register Variable          | Automatic Variable |
+| ------------- | -------------------------- | ------------------ |
+| Storage       | CPU Register (if possible) | Stack memory       |
+| Speed         | Faster                     | Normal             |
+| Scope         | Block                      | Block              |
+| Lifetime      | Till block ends            | Till block ends    |
+| Address (`&`) | Not allowed                | Allowed            |
+## When to Use
+- Loop counters
+- Frequently used variables
+- Performance-critical sections
+## Key Point
+- **Register variables improve speed, but control is with the compiler**
+## Quick Summary
+- Declared with `register`
+- Stored in CPU register (if possible)
+- Faster access
+- No address access (`&`)
+- Local scope + automatic lifetime
