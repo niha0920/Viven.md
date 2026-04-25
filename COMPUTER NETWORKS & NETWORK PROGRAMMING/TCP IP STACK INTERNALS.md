@@ -116,3 +116,105 @@ Live video streaming to multiple users
 - **IP Address → identifies location**
 - **MAC Address → identifies device**
 - **Unicast/Broadcast/Multicast → defines how data is sent**
+
+# Subnetting/Supernetting
+## Subnetting
+### What is Subnetting?
+Subnetting is the process of **dividing one large network into smaller networks (subnets)**.
+- Done by **borrowing bits from the host par**t of an IP address.
+## Why Subnetting?
+- Improves **network performance** (less traffic)
+- Enhances **security** (isolation of networks)
+- Efficient use of IP addresses
+- Easier **network management**
+## Example
+- Original network: `192.168.1.0/24`
+- After subnetting:
+  - `192.168.1.0/26`
+  - `192.168.1.64/26`
+  - `192.168.1.128/26`
+  - `192.168.1.192/26`
+- Here, `/26` means more bits used for network → **more subnets, fewer hosts**
+## Key Idea
+- **More subnet bits → More subnets, fewer hosts per subnet**
+## Supernetting (CIDR – Classless Inter-Domain Routing)
+### What is Supernetting?
+Supernetting is the process of **combining multiple smaller networks into one larger network**.
+- Done by **reducing network bits (adding host bits)**
+## Why Supernetting?
+- Reduces **routing table size**
+- Improves **routing efficiency**
+- Used in **Internet routing (CIDR)**
+## Example
+Combine:
+- `192.168.0.0/24`
+- `192.168.1.0/24`
+### Supernet:
+- `192.168.0.0/23`
+## Key Idea
+- **Fewer network bits → Larger network, more hosts**
+## Subnetting vs Supernetting
+| Feature           | Subnetting       | Supernetting (CIDR) |
+| ----------------- | ---------------- | ------------------- |
+| Purpose           | Divide network   | Combine networks    |
+| Bits Used         | Borrow host bits | Reduce network bits |
+| Result            | Smaller networks | Larger network      |
+| Hosts per Network | Decreases        | Increases           |
+| Routing           | More entries     | Fewer entries       |
+## Easy Memory Trick
+- **Subnetting = “Split” network**
+- **Supernetting = “Merge” networks**
+## Final Concept
+- Subnetting → Efficient **internal network design**
+- Supernetting → Efficient **Internet routing (CIDR)**
+
+# Switching
+## Switching in Computer Networks
+### What is Switching?
+Switching is the technique of **transferring data from source to destination through intermediate nodes (switches)**.
+- It ensures data reaches the correct device efficiently.
+## Types of Switching
+### 1. Circuit Switching
+- A **dedicated path** is established before communication starts
+- Path remains reserved until communication ends
+#### Features:
+- Fixed bandwidth
+- No delay after connection setup
+- Inefficient (resources reserved even if idle)
+#### Example:
+- Traditional telephone networks (like PSTN)
+##### Think: Call connection (fixed path)
+## 2. Packet Switching
+- Data is broken into **small packets**
+- Each packet travels **independently**
+- Packets may take different paths
+### Features:
+- Efficient use of bandwidth
+- No dedicated path
+- Possible delay, packet loss, or reordering
+### Example:
+- Internet communication using TCP/IP
+#### Think: Sending WhatsApp messages (split & sent separately)
+## 3. Message Switching
+- Entire message is sent **as one unit**
+- No need for dedicated path
+- Uses **store-and-forward technique**
+### Features:
+- High delay (stores full message before forwarding)
+- Not used in modern networks
+#### Think: Email (store then forward)
+## Comparison of Switching Techniques
+| Feature    | Circuit Switching  | Packet Switching | Message Switching |
+| ---------- | ------------------ | ---------------- | ----------------- |
+| Path       | Dedicated          | No fixed path    | No fixed path     |
+| Data Unit  | Continuous stream  | Packets          | Entire message    |
+| Delay      | Low after setup    | Variable         | High              |
+| Efficiency | Low                | High             | Moderate          |
+| Usage      | Telephone networks | Internet         | Obsolete          |
+## Key Points
+- **Switching = Data transfer via intermediate nodes**
+- **Circuit switching → fixed path**
+- **Packet switching → flexible, efficient**
+- **Message switching → outdated**
+## Final Concept
+Modern networks (like the Internet) mainly use **packet switching** because it is **fast, efficient, and scalable**.
