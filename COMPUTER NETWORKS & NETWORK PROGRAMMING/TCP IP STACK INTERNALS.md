@@ -218,3 +218,46 @@ Switching is the technique of **transferring data from source to destination thr
 - **Message switching → outdated**
 ## Final Concept
 Modern networks (like the Internet) mainly use **packet switching** because it is **fast, efficient, and scalable**.
+
+# ARP/RARP
+## ARP (Address Resolution Protocol)
+### What is ARP?
+ARP is used to **find the MAC (hardware) address from a known IP address**.
+- Works within a **local network (LAN)**
+## How ARP Works (Step-by-Step)
+1. Device knows **IP address**, but not MAC
+2. Sends **ARP Request (broadcast)** → “Who has this IP?”
+3. All devices receive it
+4. Target device replies with its **MAC address (unicast)**
+5. Sender stores it in **ARP cache**
+## Example
+- IP: `192.168.1.10`
+- MAC found: `00:1A:2B:3C:4D:5E`
+## Key Points
+- Uses **broadcast (request)** and **unicast (reply)**
+- Operates between **Network & Data Link layer**
+- Maintains **ARP table (cache)**
+## RARP (Reverse Address Resolution Protocol)
+### What is RARP?
+RARP is used to **find the IP address from a known MAC address**.
+## How RARP Works
+1. Device knows its **MAC address**
+2. Sends **RARP request** to server
+3. RARP server replies with **IP address**
+## Usage
+- Used by **diskless workstations** at startup
+- Now mostly replaced by newer protocols like DHCP
+## ARP vs RARP
+| Feature       | ARP                         | RARP                                |
+| ------------- | --------------------------- | ----------------------------------- |
+| Full Form     | Address Resolution Protocol | Reverse Address Resolution Protocol |
+| Purpose       | IP → MAC                    | MAC → IP                            |
+| Direction     | Logical → Physical          | Physical → Logical                  |
+| Usage         | Commonly used               | Rare/obsolete                       |
+| Communication | Broadcast + Unicast         | Server-based                        |
+## Easy Memory Trick
+- **ARP → Ask MAC from IP**
+- **RARP → Reverse (IP from MAC)**
+## Final Concept
+- ARP is **essential for everyday networking (LAN communication)**
+- RARP is **outdated and replaced by DHCP**
