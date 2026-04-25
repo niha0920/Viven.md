@@ -75,3 +75,63 @@ Routing is the process of selecting the best path for data.
 - Core function: **Addressing + Routing**
 
 # ICMP
+## ICMP (Internet Control Message Protocol)
+**ICMP** is a supporting protocol used in IP networks for **error reporting and diagnostics**. It helps devices understand what went wrong during communication.
+- Works at the **Network Layer**
+- Used along with IP (not a transport protocol like TCP/UDP)
+- Mainly for **control and troubleshooting**, not for sending actual data
+## Why ICMP is Needed
+IP is **connectionless** and doesn’t guarantee delivery. So ICMP is used to:
+- Report errors (e.g., destination unreachable)
+- Check network connectivity
+- Provide feedback about packet delivery
+## How ICMP Works
+<img width="1320" height="660" alt="image" src="https://github.com/user-attachments/assets/c7bd0e45-eec3-447a-91e5-84c6d7937671" />
+
+Example:
+1. Device A sends data to Device B
+2. If something fails, router/device sends an **ICMP message back**
+3. This message explains the issue
+## Common ICMP Message Types
+### 1. Echo Request & Echo Reply
+- Used by **ping command**
+- Checks if a host is reachable
+#### Example:
+```
+ping google.com
+```
+## 2. Destination Unreachable
+- Sent when packet cannot reach destination
+- Reasons:
+  - Network unreachable
+  - Host unreachable
+  - Port unreachable
+## 3. Time Exceeded
+- When packet’s **TTL (Time To Live)** becomes zero
+- Used in **traceroute**
+## 4. Redirect Message
+- Router tells host to use a better route
+## 5. Parameter Problem
+- Error in IP header
+## ICMP Packet Format
+<img width="3401" height="1695" alt="image" src="https://github.com/user-attachments/assets/12aebe16-3722-44a2-99b2-2e4c3238b3e3" />
+
+Main fields:
+- **Type** → Defines message type
+- **Code** → Gives more details
+- **Checksum** → Error checking
+- **Data** → Extra information
+## Real-Life Tools Using ICMP
+### Ping
+- Uses Echo Request & Reply
+- Tests connectivity
+### Traceroute
+- Uses Time Exceeded messages
+- Finds path to destination
+## Key Characteristics
+- Connectionless
+- No port numbers
+- Encapsulated inside IP packet
+- Used for **diagnostics, not data transfer**
+
+# Routing concepts
