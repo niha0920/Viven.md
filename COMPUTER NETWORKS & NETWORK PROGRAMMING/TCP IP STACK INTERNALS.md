@@ -221,6 +221,8 @@ Modern networks (like the Internet) mainly use **packet switching** because it i
 
 # ARP/RARP
 ## ARP (Address Resolution Protocol)
+<img width="346" height="401" alt="image" src="https://github.com/user-attachments/assets/7ed4719a-f686-4e38-98e2-3158cdf95066" />
+
 ### What is ARP?
 ARP is used to **find the MAC (hardware) address from a known IP address**.
 - Works within a **local network (LAN)**
@@ -238,6 +240,8 @@ ARP is used to **find the MAC (hardware) address from a known IP address**.
 - Operates between **Network & Data Link layer**
 - Maintains **ARP table (cache)**
 ## RARP (Reverse Address Resolution Protocol)
+<img width="801" height="400" alt="image" src="https://github.com/user-attachments/assets/d2835d4b-c73e-47b0-b149-1d37e7dadee5" />
+
 ### What is RARP?
 RARP is used to **find the IP address from a known MAC address**.
 ## How RARP Works
