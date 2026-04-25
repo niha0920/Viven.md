@@ -135,3 +135,67 @@ Main fields:
 - Used for **diagnostics, not data transfer**
 
 # Routing concepts
+## Routing Concepts (Computer Networks)
+Routing is the process of **selecting the best path** for data (packets) to travel from source to destination across interconnected networks.
+## What is Routing?
+- Performed by **routers**
+- Uses **IP addresses** to forward packets
+- Ensures data reaches the correct destination efficiently
+## How Routing Works
+<img width="980" height="1074" alt="image" src="https://github.com/user-attachments/assets/0cabb54c-a256-411c-845c-64a8ecc27ffc" />
+
+### Steps:
+1. Sender sends packet with destination IP
+2. Router checks its **routing table**
+3. Chooses the best path
+4. Forwards packet to next router
+5. Process continues until destination is reached
+## Routing Table
+A **routing table** is a list stored in routers containing:
+- Destination network
+- Next hop (next router)
+- Metric (cost of path)
+- Interface to use
+* It is like a **map** for routers
+## Types of Routing
+### 1. Static Routing
+- Routes are **manually configured**
+- No automatic updates
+* Simple but not scalable
+* Used in small networks
+## 2. Dynamic Routing
+- Routes are **automatically updated**
+- Routers communicate with each other
+* Suitable for large networks
+* Adapts to failures
+## 3. Default Routing
+- Used when no specific route is found
+- Packet is sent to a **default gateway**
+## Routing Algorithms
+### Distance Vector Routing
+- Shares routing table with neighbors
+- Example: **RIP**
+- Uses **hop count** as metric
+### Link State Routing
+- Builds full network topology
+- Uses shortest path algorithm
+#### Example protocols:
+- **OSPF**
+- **IS-IS**
+## Routing Protocols
+### Interior Gateway Protocols (IGP)
+Used **within a network (Autonomous System)**:
+- RIP
+- OSPF
+- EIGRP
+### Exterior Gateway Protocol (EGP)
+Used **between networks**:
+- BGP (used on the Internet)
+## Key Routing Terms
+- **Hop** → One router to another
+- **Metric** → Cost of path (hop count, bandwidth, delay)
+- **Next Hop** → Next router in path
+- **Convergence** → Time taken for routers to update routes
+## Routing vs Forwarding
+- **Routing** → Decides path (control plane)
+- **Forwarding** → Sends packet to next hop (data plane)
