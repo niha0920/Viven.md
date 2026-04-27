@@ -449,3 +449,83 @@ for(register int i = 0; i < n; i++) {
 - Faster access
 - No address access (`&`)
 - Local scope + automatic lifetime
+
+#  Volatile
+## Volatile Variable in C
+A **volatile variable** tells the compiler:
+- “This variable’s value may change at any time — don’t optimize it.”
+## Why `volatile` is Needed?
+Normally, the compiler optimizes code by:
+- Storing variables in registers
+- Avoiding repeated memory access
+###
+But in some cases, values can change **externally**, such as:
+- Hardware registers
+- Interrupt Service Routines (ISR)
+- Multi-threaded programs
+###
+In such cases, optimization can cause **incorrect behavior**
+## Definition
+A variable declared with `volatile`:
+- Is **always read from memory**
+- Is **never optimized by the compiler**
+```c
+volatile int x;
+```
+## Example (Without `volatile` → Problem)
+```c
+int flag = 0;
+while(flag == 0) {
+    // wait
+}
+```
+- Compiler may optimize this loop (assume `flag` never changes)
+- Loop may run infinitely 
+## Correct Version (Using `volatile`)
+```c
+volatile int flag = 0;
+while(flag == 0) {
+    // wait until flag changes
+}
+```
+- Compiler checks `flag` from memory every time
+## Real-Time Use Cases
+### 1. Hardware Registers
+```c
+volatile int *status_reg = (int *)0x4000;
+```
+- Value may change due to hardware
+## 2. Interrupt Service Routine (ISR)
+```c
+volatile int flag = 0;
+void ISR() {
+    flag = 1;
+}
+```
+- `flag` updated asynchronously
+## 3. Multithreading
+- Shared variables between threads
+## Key Characteristics
+- Prevents compiler optimization
+- Value can change anytime
+- Always fetched from memory
+- Mostly used in embedded systems
+## Volatile vs Const
+| Feature     | `volatile`               | `const`                 |
+| ----------- | ------------------------ | ----------------------- |
+| Meaning     | Value may change anytime | Value cannot be changed |
+| Modified by | External sources         | Program cannot modify   |
+| Use case    | Hardware, ISR, threads   | Read-only data          |
+## Combined Usage
+```c
+const volatile int sensor_data;
+```
+- Program cannot modify it
+- But value may change externally
+## Key Point
+- **volatile ensures correctness, not speed**
+## Quick Summary
+- Declared using **volatile**
+- Prevents compiler optimization
+- Used when value changes unexpectedly
+- Important in embedded & system programming
