@@ -407,53 +407,141 @@ padding → [3 bytes]
 ###
 Structure size = multiple of **largest data type alignment**
 ## 5. Reducing Holes (Optimization)
-
-Reorder members from largest → smallest.
-
-❌ Poor Design:
+Reorder members from **largest → smallest**.
+### Poor Design:
+```c
 struct Bad {
     char a;
     int b;
     char c;
 };
-✅ Optimized Design:
+```
+### Optimized Design:
+```c
 struct Good {
     int b;
     char a;
     char c;
 };
-
-👉 Size reduces (e.g., from 12 → 8 bytes)
-
-🔹 6. Checking Structure Size
-
-Use sizeof():
-
+```
+- Size reduces (e.g., from 12 → 8 bytes)
+## 6. Checking Structure Size
+Use `sizeof()`:
+```c
 printf("%lu", sizeof(struct Example));
-🔹 7. Important Notes
-
-✔️ Padding depends on compiler & architecture
-✔️ Improves performance (not memory efficiency)
-✔️ Cannot always be avoided completely
-✔️ Important in:
-
-Embedded systems
-Networking (packet structures)
-Memory-critical applications
-🔹 8. Packed Structures (Advanced)
-
+```
+## 7. Important Notes
+- Padding depends on compiler & architecture
+- Improves performance (not memory efficiency)
+- Cannot always be avoided completely
+- Important in:
+  - Embedded systems
+  - Networking (packet structures)
+  - Memory-critical applications
+## 8. Packed Structures (Advanced)
 To remove padding:
-
+```c
 #pragma pack(1)
 struct Packed {
     char a;
     int b;
 };
+```
+- No holes, but may reduce performance.
+## Key Points
+- **Memory is not always tightly packed**
+- **Holes = padding bytes added for alignment**
+- **Reordering members reduces memory waste**
+- **Alignment improves CPU performance**
 
-👉 No holes, but may reduce performance.
-
-🔹 Key Points
-Memory is not always tightly packed
-Holes = padding bytes added for alignment
-Reordering members reduces memory waste
-Alignment improves CPU performance
+# Unions
+## Unions in C
+A **union** is a user-defined data type (like a structure) that allows you to store **different data types in the same memory location**.
+- Key idea:
+### 
+**All members share the same memory** → only **one member can hold a valid value at a time**.
+## 1. Declaration of Union
+```c
+union Data {
+    int i;
+    float f;
+    char str[20];
+};
+```
+## 2. Creating Union Variables
+```c
+union Data d1;
+```
+## 3. Memory Allocation in Union
+Unlike structures, **union allocates memory equal to its largest member**.
+### Example:
+```c
+union Data {
+    int i;       // 4 bytes
+    float f;     // 4 bytes
+    char str[20];// 20 bytes
+};
+```
+- Total size = **20 bytes** (not 28)
+## 4. Initialization of Union
+```c
+union Data d1 = {10};   // Initializes first member (i)
+```
+- Only **one member can be initialized at a time**.
+## 5. Accessing Union Members
+```c
+d1.i = 10;
+printf("%d\n", d1.i);
+d1.f = 3.14;
+printf("%f\n", d1.f);
+```
+- When you assign a new value, previous data is **overwritten**.
+## 6. Demonstration of Shared Memory
+```c
+#include <stdio.h>
+union Data {
+    int i;
+    float f;
+};
+int main() {
+    union Data d;
+    d.i = 10;
+    printf("i = %d\n", d.i);
+    d.f = 3.14;
+    printf("f = %f\n", d.f);
+    printf("i (after f assigned) = %d\n", d.i);
+    return 0;
+}
+```
+- Output shows that changing `f` affects `i`.
+## 7. Structure vs Union (Quick Difference)
+| Feature | Structure                     | Union                     |
+| ------- | ----------------------------- | ------------------------- |
+| Memory  | Separate for each member      | Shared memory             |
+| Size    | Sum of all members (+padding) | Size of largest member    |
+| Usage   | Store multiple values         | Store one value at a time |
+| Access  | All members valid             | Only last assigned valid  |
+## 8. Use Cases of Unions
+- Memory optimization
+- Embedded systems
+- Hardware registers
+- Interpreting same data in different formats
+- Variant data (like one variable holding multiple types)
+## 9. Example Use Case
+```c
+union Value {
+    int intVal;
+    float floatVal;
+};
+union Value v;
+v.intVal = 5;
+v.floatVal = 3.5;  // overwrites intVal
+```
+## 10. Important Points
+- Only one member is valid at a time
+- All members share the same memory address
+- Changing one member affects others
+- Used when memory efficiency is critical
+## Key Takeaway
+- **Structure = “store everything”**
+- **Union = “store one at a time efficiently”**
