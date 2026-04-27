@@ -259,3 +259,230 @@ A large network (like an ISP or organization) managed by one entity.
 1. Data leaves your ISP (AS1)
 2. Travels through multiple AS (AS2, AS3)
 3. Reaches destination AS
+
+# Routing Algorithms
+## Routing Algorithms (Computer Networks)
+Routing algorithms determine **how routers choose the best path** for forwarding packets from source to destination.
+- Goal: **Efficient, fast, and reliable data delivery**
+## How Routing Algorithms Work
+- Network is viewed as a **graph**
+  - Routers → Nodes
+  - Links → Edges
+- Each link has a **cost (metric)**
+- Algorithm finds the **shortest/optimal path**
+## Classification of Routing Algorithms
+### 1. Static vs Dynamic
+- **Static Routing Algorithm**
+  - Manually configured
+  - No automatic updates
+- **Dynamic Routing Algorithm**
+  - Automatically updates routes
+  - Adapts to network changes
+## Main Types of Routing Algorithms
+## 1. Distance Vector Routing
+### Concept:
+- Each router shares its **routing table with neighbors**
+- Uses **Bellman-Ford algorithm**
+### Features:
+- Simple
+- Uses **hop count** as metric
+- Periodic updates
+### Example Protocol:
+- RIP (Routing Information Protocol)
+### Problems:
+- Slow convergence
+- Count-to-infinity issue
+## 2. Link State Routing
+### Concept:
+- Each router builds a **complete map of the network**
+- Uses **Dijkstra’s algorithm**
+### Features:
+- Faster convergence
+- More accurate
+- Uses **Link State Advertisements (LSA)**
+### Example Protocol:
+- OSPF (Open Shortest Path First)
+## 3. Path Vector Routing
+### Concept:
+- Maintains **entire path (list of AS)**
+- Used for inter-domain routing
+### Features:
+- Avoids loops
+- Policy-based routing
+### Example Protocol:
+- BGP (Border Gateway Protocol)
+## Comparison of Algorithms
+| Feature   | Distance Vector | Link State    | Path Vector |
+| --------- | --------------- | ------------- | ----------- |
+| Knowledge | Neighbor only   | Full topology | Path info   |
+| Algorithm | Bellman-Ford    | Dijkstra      | Path-based  |
+| Speed     | Slow            | Fast          | Moderate    |
+| Example   | RIP             | OSPF          | BGP         |
+## Key Terms
+- **Metric** → Cost of path (hop, delay, bandwidth)
+- **Convergence** → Time to update routing info
+- **Loop** → Packet circulates endlessly
+- **Scalability** → Works for large networks
+
+# Routing protocols
+## Routing Protocols (Computer Networks)
+**Routing protocols** are rules and procedures that routers use to **exchange information and determine the best path** for forwarding data across networks.
+- Without routing protocols, routers wouldn’t know **where to send packets**.
+## Why Routing Protocols are Needed
+- Automatically discover routes
+- Adapt to network changes (failures, congestion)
+- Maintain updated **routing tables**
+- Choose optimal path using metrics
+## How Routing Protocols Work
+- Routers **communicate with each other**
+- Share routing information
+- Update routing tables dynamically
+- Select best path based on algorithm
+## Classification of Routing Protocols
+## 1. Interior Gateway Protocols (IGP)
+Used **within an Autonomous System (AS)**
+### RIP
+- Type: Distance Vector
+- Metric: Hop count
+- Max hops: 15
+- Simple but slow
+## OSPF
+- Type: Link State
+- Uses Dijkstra algorithm
+- Fast convergence
+- Suitable for large networks
+## EIGRP
+- Type: Hybrid
+- Combines Distance Vector + Link State features
+- Faster and efficient
+## 2. Exterior Gateway Protocol (EGP)
+Used **between Autonomous Systems**
+### BGP
+- Type: Path Vector
+- Used on the Internet
+- Maintains AS path
+- Policy-based routing
+## Types Based on Algorithm
+| Protocol | Algorithm       |
+| -------- | --------------- |
+| RIP      | Distance Vector |
+| OSPF     | Link State      |
+| EIGRP    | Hybrid          |
+| BGP      | Path Vector     |
+## Key Metrics Used
+- Hop count
+- Bandwidth
+- Delay
+- Reliability
+- Cost
+## Important Concepts
+### Convergence
+- Time taken for all routers to update routes
+### Scalability
+- Ability to handle large networks
+### Loop Prevention
+- Avoid packets circulating endlessly
+## Quick Comparison
+| Feature | RIP             | OSPF           | EIGRP      | BGP         |
+| ------- | --------------- | -------------- | ---------- | ----------- |
+| Type    | Distance Vector | Link State     | Hybrid     | Path Vector |
+| Speed   | Slow            | Fast           | Very Fast  | Moderate    |
+| Use     | Small networks  | Large networks | Enterprise | Internet    |
+
+# Interior/Exterior routing protocols
+## Interior vs Exterior Routing Protocols
+Routing protocols are broadly classified based on **where they operate:**
+- **Interior Routing Protocols (IGP)** → within an Autonomous System
+- **Exterior Routing Protocols (EGP)** → between Autonomous Systems
+## 1. Interior Gateway Protocols (IGP)
+- Used **inside a single Autonomous System (AS)**
+- Managed by **one organization** (like a company network or ISP internal network)
+### Common IGP Protocols
+- **RIP**
+  - Distance Vector
+  - Uses hop count
+  - Suitable for small networks
+- **OSPF**
+  - Link State
+  - Uses shortest path (Dijkstra)
+  - Fast and scalable
+- **EIGRP**
+  - Hybrid
+  - Very fast convergence
+  - Used in enterprise networks
+## How IGP Works
+- Routers share routing info **within the same AS**
+- Maintain internal routing tables
+- Choose best path using metrics
+## 2. Exterior Gateway Protocols (EGP)
+- Used **between different Autonomous Systems**
+- Connects **large networks (Internet)**
+### Main EGP Protocol
+- **BGP**
+  - Path Vector protocol
+  - Maintains **AS path**
+  - Policy-based routing
+  - Backbone of the Internet
+## How EGP Works
+- Exchanges routing info between AS
+- Uses **AS numbers (ASN)**
+- Selects best route based on policies
+## Key Differences (IGP vs EGP)
+| Feature           | IGP              | EGP                   |
+| ----------------- | ---------------- | --------------------- |
+| Scope             | Within AS        | Between AS            |
+| Example Protocols | RIP, OSPF, EIGRP | BGP                   |
+| Algorithm         | DV / LS / Hybrid | Path Vector           |
+| Speed             | Faster           | Slower (policy-based) |
+| Complexity        | Lower            | Higher                |
+| Use Case          | Internal routing | Internet routing      |
+## Simple Analogy
+- **IGP** → Roads inside a city 
+- **EGP (BGP)** → Highways connecting cities
+
+# Unicast/Multicast Routing protocols
+## Unicast vs Multicast Routing Protocols
+Routing can be classified based on **how data is delivered**:
+- **Unicast Routing** → one sender → one receiver
+- **Multicast Routing** → one sender → multiple selected receivers (group)
+## 1. Unicast Routing Protocols
+- Used for **one-to-one communication**
+### How it Works
+- Packet is sent from **source → single destination**
+- Routers forward based on **destination IP address**
+- Each destination requires a **separate packet**
+## Examples of Unicast Routing Protocols
+- **RIP**
+- **OSPF**
+- **EIGRP**
+- **BGP**
+## Features
+- Most common routing type
+- Used in:
+  - Web browsing
+  - Email
+  - File transfer
+## 2. Multicast Routing Protocols
+- Used for one-to-many communication (group communication)
+### How it Works
+- Sender sends **one packet**
+- Network creates a **distribution tree**
+- Packet is delivered only to **group members**
+## Examples of Multicast Routing Protocols
+- **DVMRP**
+- **PIM**
+- **MOSPF**
+## Features
+- Efficient (saves bandwidth)
+- Uses **multicast group addresses**
+- Builds **multicast trees**
+## Key Differences
+| Feature         | Unicast                  | Multicast                          |
+| --------------- | ------------------------ | ---------------------------------- |
+| Communication   | One-to-one               | One-to-many (group)                |
+| Bandwidth Usage | High (duplicate packets) | Efficient (single stream)          |
+| Routing Path    | Single path              | Tree structure                     |
+| Use Cases       | Web, email               | Live streaming, video conferencing |
+## Simple Example
+- **Unicast** → Sending a message to one friend
+- **Multicast** → Sending one message to a WhatsApp group
