@@ -599,3 +599,65 @@ UDP is used where **speed is more important than reliability**:
 - Packets may be lost or arrive out of order
 
 # Transmission Control Protocol (TCP)
+## Transmission Control Protocol (TCP)
+**Transmission Control Protocol (TCP)** is a **connection-oriented, reliable transport layer protocol** used to ensure **accurate and ordered delivery of data** over networks.
+- It is one of the core protocols of the Internet (TCP/IP model).
+## Key Idea
+TCP establishes a **reliable connection** before sending data and ensures:
+- No data loss
+- Correct order
+- Error recovery
+###
+Think of it like a **phone call** — connection first, then communication.
+## How TCP Works (Connection Process)
+<img width="1400" height="1392" alt="image" src="https://github.com/user-attachments/assets/e47b0314-43b1-49d5-a0a6-8cb92dcc56f1" />
+
+### Three-Way Handshake
+1. **SYN** → Client requests connection
+2. **SYN-ACK** → Server acknowledges
+3. **ACK** → Client confirms
+- Connection is established
+## Data Transfer in TCP
+- Data is divided into **segments**
+- Each segment has a **sequence number**
+- Receiver sends **acknowledgments (ACKs)**
+- Lost packets are **retransmitted**
+## TCP Header Format
+<img width="600" height="500" alt="image" src="https://github.com/user-attachments/assets/a214437d-3e64-4adf-8e49-4d94a7487785" />
+
+Important fields:
+- Source Port
+- Destination Port
+- Sequence Number
+- Acknowledgment Number
+- Flags (SYN, ACK, FIN, etc.)
+- Window Size
+- Checksum
+## Features of TCP
+- **Connection-oriented**
+- **Reliable delivery**
+- **Error detection & correction**
+- **Flow control** (prevents overload)
+- **Congestion control**
+- **Ordered delivery**
+## TCP Connection Termination
+<img width="1024" height="559" alt="image" src="https://github.com/user-attachments/assets/e4777179-71be-4316-987c-d48fd374ba33" />
+
+### Four-Way Handshake
+1. FIN → Close request
+2. ACK → Acknowledgment
+3. FIN → Other side closes
+4. ACK → Final confirmation
+## TCP vs UDP
+| Feature     | TCP                | UDP               |
+| ----------- | ------------------ | ----------------- |
+| Connection  | Yes                | No                |
+| Reliability | High               | Low               |
+| Speed       | Slower             | Faster            |
+| Ordering    | Yes                | No                |
+| Use Case    | File transfer, web | Streaming, gaming |
+## Applications of TCP
+- Web browsing (HTTP/HTTPS)
+- Email (SMTP)
+- File transfer (FTP)
+- Remote login (SSH)
