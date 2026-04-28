@@ -486,3 +486,63 @@ Routing can be classified based on **how data is delivered**:
 ## Simple Example
 - **Unicast** → Sending a message to one friend
 - **Multicast** → Sending one message to a WhatsApp group
+
+# IGMP
+## IGMP (Internet Group Management Protocol)
+**IGMP** is a protocol used in IP networks to manage **multicast group membership**.
+- In simple terms:
+###
+It tells routers **which devices want to receive multicast data** (like live streaming).
+## Why IGMP is Needed
+In multicast communication:
+- Data is sent to a **group address**, not individual devices
+- Routers must know **who is interested**
+### IGMP helps routers:
+- Add devices to a multicast group
+- Remove devices from the group
+- Avoid sending unwanted traffic
+## How IGMP Works
+<img width="547" height="585" alt="image" src="https://github.com/user-attachments/assets/d197b4d8-48f8-4a10-99dc-0ed64f70e5a0" />
+
+### Step-by-step:
+1. Host wants to join a multicast group
+2. Host sends **IGMP Membership Report (Join)**
+3. Router records membership
+4. Router forwards multicast traffic to that host
+#### When leaving:
+- Host sends **Leave message**
+- Router stops forwarding traffic
+## IGMP Message Types
+### 1. Membership Query
+- Sent by router
+- Asks: “Who wants multicast data?”
+## 2. Membership Report
+- Sent by host
+- Says: “I want to join this group”
+## 3. Leave Group
+- Sent by host
+- Says: “I no longer need this data”
+## IGMP Versions
+| Version | Features                           |
+| ------- | ---------------------------------- |
+| IGMPv1  | Basic membership management        |
+| IGMPv2  | Adds Leave message                 |
+| IGMPv3  | Supports source-specific multicast |
+## IGMP and Multicast Routing
+- IGMP works between:
+  - **Host ↔ Router**
+- Multicast routing protocols (like PIM) work between:
+  - **Router ↔ Router**
+### So:
+- IGMP = group membership
+- Multicast routing = data delivery
+## Key Characteristics
+- Works at **Network Layer**
+- Uses **multicast IP addresses**
+- Does not route data itself
+- Only manages group membership
+## Real-Life Example
+- Watching a live cricket match on Hotstar
+- Your device joins a multicast group
+- IGMP tells router to send that stream to you
+
