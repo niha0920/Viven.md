@@ -546,3 +546,56 @@ In multicast communication:
 - Your device joins a multicast group
 - IGMP tells router to send that stream to you
 
+# User datagram Protocol (UDP)
+## User Datagram Protocol (UDP)
+**User Datagram Protocol (UDP)** is a **transport layer protocol** used for **fast, connectionless communication**.
+- It is part of the **TCP/IP model** and works alongside TCP.
+## Key Idea
+UDP sends data in small packets called **datagrams without establishing a connection**.
+- Think of it like sending a letter without confirmation 📩
+(no guarantee it reaches, but it’s fast)
+## How UDP Works
+<img width="1315" height="1383" alt="image" src="https://github.com/user-attachments/assets/840d2bbf-83e4-4ab4-b377-ce192047c028" />
+
+- No connection setup (no handshake)
+- Data sent directly
+- No acknowledgment or retransmission
+- Faster but less reliable
+## Features of UDP
+- **Connectionless**
+- **Unreliable** (no guarantee of delivery)
+- **No ordering of packets**
+- **Low overhead**
+- **Fast transmission**
+## UDP Header Format
+<img width="1280" height="720" alt="image" src="https://github.com/user-attachments/assets/93c23651-04c6-46ce-8a5c-9fd2b3990d79" />
+
+UDP header has only **8 bytes**:
+- **Source Port**
+- **Destination Port**
+- **Length**
+- **Checksum**
+## UDP vs TCP
+| Feature     | UDP  | TCP    |
+| ----------- | ---- | ------ |
+| Connection  | No   | Yes    |
+| Reliability | No   | Yes    |
+| Speed       | Fast | Slower |
+| Overhead    | Low  | High   |
+| Ordering    | No   | Yes    |
+## Applications of UDP
+UDP is used where **speed is more important than reliability**:
+- Video streaming
+- Online gaming
+- Voice calls (VoIP)
+- DNS (Domain Name System)
+## Advantages
+- Very fast
+- Simple protocol
+- Low latency
+## Disadvantages
+- No error recovery
+- No congestion control
+- Packets may be lost or arrive out of order
+
+# Transmission Control Protocol (TCP)
