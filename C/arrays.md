@@ -177,3 +177,79 @@ int main()
         }
 }
 ```
+
+# missing_num.c
+```c
+#include<stdio.h>
+int main()
+{
+        int arr[] = {1,2,3,4,6,7};
+        int n = sizeof(arr) / sizeof(arr[0]);
+        int expected = 0;
+        for(int i = 1; i <= n + 1; i++)
+        {
+                expected += i;
+        }
+        int actual = 0;
+        for(int i = 0; i < n; i++)
+        {
+                actual += arr[i];
+        }
+        printf("Missing number: %d", expected - actual);
+}
+```
+
+# palindrome.c
+```c
+#include<stdio.h>
+int main()
+{
+        int arr[] = {1,2,3,3,2,1};
+        int n = sizeof(arr) / sizeof(arr[0]);
+        for(int i = 0; i < n/2; i++)
+        {
+                if(arr[i] != arr[n - 1 - i])
+                {
+                        printf("Not a palindrome");
+                        return 0;
+                }
+        }
+        printf("Palindrome");
+}
+```
+
+# remove_dup.c
+```c
+#include<stdio.h>
+int dup(int arr[], int n)
+{
+        int size = 0;
+        for(int i = 0; i < n; i++)
+        {
+                int dup = 0;
+                for(int j = 0; j < size; j++)
+                {
+                        if(arr[i] == arr[j])
+                        {
+                                dup = 1;
+                                break;
+                        }
+                }
+                if(!dup)
+                        arr[size++] = arr[i];
+        }
+        return size;
+}
+int main()
+{
+        int arr[10] = {1,2,1,2,1,4,5,6,5,6};
+        int n = sizeof(arr) / sizeof(arr[0]);
+        n = dup(arr, n);
+        for(int i = 0; i < n; i++)
+        {
+                printf("%d ", arr[i]);
+        }
+}
+```
+
+# 
