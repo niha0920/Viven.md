@@ -114,4 +114,66 @@ int main()
 }
 ```
 
-# 
+# large_sec_largest.c
+```c
+#include<stdio.h>
+#include<limits.h>
+int main()
+{
+        int arr[] = {1,2,10,5,7,12};
+        int n = sizeof(arr) / sizeof(arr[0]);
+        int max1 = INT_MIN, max2 = INT_MIN;
+        for(int i = 0; i < n; i++)
+        {
+                if(arr[i] > max1)
+                {
+                        max2 = max1;
+                        max1 = arr[i];
+                }
+                else if(arr[i] < max1 && arr[i] > max2)
+                        max2 = arr[i];
+        }
+        printf("Second largest element: %d", max2);
+}
+```
+
+# largest_smallest.c
+```c
+#include<stdio.h>
+int main()
+{
+        int arr[] = {2,3,4,15,6,5};
+        int n = sizeof(arr) / sizeof(arr[0]);
+        int large = arr[0];
+        int small = arr[0];
+        for(int i = 0; i < n; i++)
+        {
+                if(arr[i] > large)
+                        large = arr[i];
+                if(arr[i] < small)
+                        small = arr[i];
+        }
+        printf("Large: %d Small: %d", large, small);
+}
+```
+
+# merge_sorted_arrays.c
+```c
+#include<stdio.h>
+#define size 3
+int main()
+{
+        int arr1[size] = {1, 2, 3};
+        int arr2[size] = {3, 4, 5};
+        int arr3[size + size];
+        for(int i = 0; i < size; i++)
+        {
+                arr3[i] = arr1[i];
+                arr3[size + i] = arr2[i];
+        }
+        for(int i = 0; i < (size + size); i++)
+        {
+                printf("%d ", arr3[i]);
+        }
+}
+```
