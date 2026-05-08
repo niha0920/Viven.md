@@ -66,4 +66,32 @@ int main()
 }
 ```
 
+# dynamic_2d_array.c
+```c
+#include<stdio.h>
+#include<stdlib.h>
+#define rows 3
+#define cols 3
+int main()
+{
+        int *arr = (int *)malloc(rows * cols * sizeof(int));
+        for(int i = 0; i < rows; i++)
+        {
+                for(int j = 0; j < cols; j++)
+                {
+                        scanf("%d", &arr[i * cols + j]);
+                }
+        }
+        for(int i = 0; i < rows; i++)
+        {
+                for(int j = 0; j < cols; j++)
+                {
+                        printf("%d ", arr[i * cols + j]);
+                }
+                printf("\n");
+        }
+        free(arr);
+}
+```
+
 # 
