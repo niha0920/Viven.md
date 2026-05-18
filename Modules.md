@@ -129,3 +129,8 @@
 - Functionality of Assembler
 - Functionality of Linker
 - Interrupting the Compiler
+- Compiling a C Program
+- Preprocessor Features
+- Predefined Preprocessor Symbols
+- Warnings and Extensions
+- Optimization
