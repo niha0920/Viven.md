@@ -50,3 +50,82 @@
 ## BITWISE OPERATORS
 - AND (&), OR (|), XOR (^)
 - Compliment (~)
+- Left-shift (<<), Right-shift (>>)
+- Masking, Setting and Testing of Bit/Bits
+## POINTERS
+- The purpose of pointers
+- Defining pointers
+- The & and * operators
+- Pointer assignment
+- Pointers with functions
+- Pointer to Pointer
+- Pointers to Arrays
+- Array of Pointers
+- Void Pointers
+- Call By value and Call by reference
+- Advanced pointer types
+- Pointers to functions
+- Pointers and Strings
+- Pointers and Dynamic memory
+## COMMAND LINE ARGUMENTS DYNAMIC MEMORY ALLOCATION
+- Allocation (Malloc, Calloc, Realloc)
+- De-Allocation (Free)
+## VARIABLE NUMBER OF ARGUMENTS
+- Implements of printf()
+- Implementation of scanf()
+## DATA STRUCTURES
+- Introduction
+- Structured Representation
+- Statements and Control Structures
+- Abstract Data Types
+- Static & Dynamic Data Types
+- Arrays & Pointers
+- Linked List
+- Advanced Data Structures
+- Data Structure Representation
+- Analysis-Performance analysis of Time and space
+- Design: Algorithm and Flowchart
+- Pseudo Code
+## LINKED LIST
+- Introduction
+- Advantages of Linked List over an Array
+- Operation of Singly Linked Lists
+- Operations on Doubly Linked Lists
+- Circular Double Linked Lists
+- Uses of Linked Lists
+- Difference between Arrays and Linnked List
+## SORTING AND SEARCHING TECHNIQUES
+- Insertion sort
+- Selection sort
+- Bubble sort
+- Merge sort
+- Quick sort
+- Heap sort
+- Linear search
+- Binary search
+## FILE HANDLING CONCEPTS
+- Concepts of a FILE data type
+- File Input, Output operations
+- Sequential Files
+- Random Access Files
+## STANDARD I/O LIBRARY FUNCTIONS
+- fopen, fread, fwrite, fclose, fseek
+- Relationship between file descriptor
+- and FILE pointer
+- Character at a time I/O
+- Line at a time I/O
+- Formatted I/O
+## READING AND WRITING STRUCTURES TO FILES
+- In Ascii format
+- In Binary format
+- Modifying a structure in the file
+## DEVELOPMENT TOOLS & UTILITIES
+- LINUX COMMANDS USEFUL IN DEVELOPMENT
+- Vi editor
+- GCC compiler
+- Four stages of GCC
+- Functionality of Preprocessor
+- Functionality of Compiler
+- Functionality of Assembler
+- Functionality of Linker
+- Interrupting the Compiler
