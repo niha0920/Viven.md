@@ -134,3 +134,8 @@
 - Predefined Preprocessor Symbols
 - Warnings and Extensions
 - Optimization
+- GDB debugger
+- Archive Utility
+- Make Utility
+- Object File format
+- Executable File Format
