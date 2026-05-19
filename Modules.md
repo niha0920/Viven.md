@@ -139,3 +139,14 @@
 - Make Utility
 - Object File format
 - Executable File Format
+# OPERATING SYSTEMS
+Learning of operating system concepts will help you in understanding Desktop, Embedded & Real-time Operating Systems easily in less time.
+- Introduction
+- Processes
+- Threads
+- CPU Scheduling
+- Process Synchronization
+- Deadlocks
+- Memory management
+- Virtual Memory
+- File management & Disk management
