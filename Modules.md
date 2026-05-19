@@ -163,3 +163,12 @@ So learning of Linux programming will help you in understanding and work easily 
 - Handling Errors with errno
 - Making Sense of errno
 - Using Strace
+## PROGRAM ARGUMENTS AND ENVIRONMENT
+- Program Startup
+- Using argc/argv
+- Handling Options with getopt()
+- Handling Options with getopt_long()
+- Environment
+- Manipulating the Environment
+- Program Exit
+- Registering Exit Handlers
