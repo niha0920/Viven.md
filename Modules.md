@@ -172,3 +172,14 @@ So learning of Linux programming will help you in understanding and work easily 
 - Manipulating the Environment
 - Program Exit
 - Registering Exit Handlers
+## BUILDING LIBRARIES
+- Why Use Libraries?
+- Static Versus Shared
+- Static Library Benefits
+- Shared Library Benefits
+- Creating a Static Library
+- Using Static Libraries
+- Creating a Shared Library
+- Using Shared Libraries
+- Shared Library Management
+- 
