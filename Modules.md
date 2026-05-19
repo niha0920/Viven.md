@@ -150,3 +150,16 @@ Learning of operating system concepts will help you in understanding Desktop, Em
 - Memory management
 - Virtual Memory
 - File management & Disk management
+# LINUX SYSTEM PROGRAMMING
+Linux is used in almost all system domains (Networking/Telecom) and also most of the RTOS are very similar to Linux.
+
+So learning of Linux programming will help you in understanding and work easily in system domain as well as in embedded systems.
+## THE GNU C LIBRARY AND SYSTEM CALLS
+- Library Goals
+- Library Standards
+- GNU C Library - glibc
+- Library Functions vs. System Calls
+- Using System Calls
+- Handling Errors with errno
+- Making Sense of errno
+- Using Strace
