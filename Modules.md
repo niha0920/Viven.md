@@ -207,4 +207,7 @@ So learning of Linux programming will help you in understanding and work easily 
 - Real Time Priority
 ## MEMORY OPERATIONS
 - Allocating/Freeing Memory
-- 
+- Memory Alignment
+- Locked Memory
+- Memory Copy/Initialization
+- Memory Comparison/Search
