@@ -182,4 +182,5 @@ So learning of Linux programming will help you in understanding and work easily 
 - Creating a Shared Library
 - Using Shared Libraries
 - Shared Library Management
-- 
+- Library Locations
+- Idconfig
