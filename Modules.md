@@ -199,4 +199,9 @@ So learning of Linux programming will help you in understanding and work easily 
 - What a Process is 
 - Process Relationships
 - Create a Child Process
-- 
+- Doing Something Else
+- Related execve() Functions
+- Wait For a Child
+- More Precise Waiting
+- Changing Priority/Nice
+- Real Time Priority
