@@ -195,3 +195,8 @@ So learning of Linux programming will help you in understanding and work easily 
 - Second Resolution Timers
 - Fine-Grained Timers
 - Real Time Clock (RTC)
+## PROCESS MANAGEMENT
+- What a Process is 
+- Process Relationships
+- Create a Child Process
+- 
