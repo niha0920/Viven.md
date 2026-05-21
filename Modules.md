@@ -205,3 +205,6 @@ So learning of Linux programming will help you in understanding and work easily 
 - More Precise Waiting
 - Changing Priority/Nice
 - Real Time Priority
+## MEMORY OPERATIONS
+- Allocating/Freeing Memory
+- 
