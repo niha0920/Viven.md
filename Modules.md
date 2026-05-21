@@ -184,3 +184,14 @@ So learning of Linux programming will help you in understanding and work easily 
 - Shared Library Management
 - Library Locations
 - Idconfig
+## TIME FUNCTIONS
+- When Does Time Begin?
+- Time Data Types
+- Determining Real Time
+- Converting time_t
+- Converting tm Structure
+- Process Time
+- Time arithmetic
+- Second Resolution Timers
+- Fine-Grained Timers
+- Real Time Clock (RTC)
