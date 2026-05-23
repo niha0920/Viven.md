@@ -219,4 +219,7 @@ So learning of Linux programming will help you in understanding and work easily 
 - Examining and Changing Memory
 - Debug info Libraries
 - Using gdb with a Running Process
-- 
+- Using gdb to Autopsy a Crash
+- Debugging Libraries - ElectricFence
+- Debugging with Valgrind
+- Profiling for Performance
