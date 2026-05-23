@@ -223,3 +223,11 @@ So learning of Linux programming will help you in understanding and work easily 
 - Debugging Libraries - ElectricFence
 - Debugging with Valgrind
 - Profiling for Performance
+## BASIC FILE OPERATIONS
+- Stream vs: System Calls
+- Opening/Closing Streams
+- Stream Input/Output Functions
+- Stream Status/Errors
+- Stream File Positioning
+- Stream Buffering
+- 
