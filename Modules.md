@@ -237,3 +237,12 @@ So learning of Linux programming will help you in understanding and work easily 
 - Stream/File Descriptor Conversions
 - cat using ANSI I/O
 - cat using POSIX I/O
+## COMMUNICATING WITH PIPES
+- Introduction to Pipes
+- Standard I/O: popen()/pclose()
+- Using popen()/pclose()
+- System Call: pipe()
+- Using pipe()
+- Named Pipes
+- Using Named Pipes
+- For Further Reading
