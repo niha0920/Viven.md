@@ -230,4 +230,10 @@ So learning of Linux programming will help you in understanding and work easily 
 - Stream Status/Errors
 - Stream File Positioning
 - Stream Buffering
-- 
+- Temporary/Scratch Files
+- Opening/Closing File Descriptors
+- File Descriptor I/O
+- Repositioning File Descriptors
+- Stream/File Descriptor Conversions
+- cat using ANSI I/O
+- cat using POSIX I/O
