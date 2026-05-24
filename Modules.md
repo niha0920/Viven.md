@@ -246,3 +246,7 @@ So learning of Linux programming will help you in understanding and work easily 
 - Named Pipes
 - Using Named Pipes
 - For Further Reading
+## MANAGING SIGNALS
+- What Signals Are
+- Blocking/Checking Signals
+- 
