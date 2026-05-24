@@ -249,4 +249,6 @@ So learning of Linux programming will help you in understanding and work easily 
 ## MANAGING SIGNALS
 - What Signals Are
 - Blocking/Checking Signals
+- Working with Signal Sets
+- Example of Blocking Signals
 - 
