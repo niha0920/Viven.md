@@ -265,4 +265,7 @@ So learning of Linux programming will help you in understanding and work easily 
 - Detaching Threads
 - Stopping Threads
 - Synchronizing with Mutexes
-- 
+- Using Mutexes
+- oRead/Write Locks
+- Conditional Variables
+- Using Conditional Variables
