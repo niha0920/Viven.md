@@ -255,3 +255,14 @@ So learning of Linux programming will help you in understanding and work easily 
 - sigaction() Example
 - Handling Signals with signal()
 - Sending Signals
+## PROGRAMMING WITH THREADS
+- Introducing Threaded Programming
+- Applications Suited to Threads
+- Building Threaded Programs
+- Creating Threads
+- Thread Identity
+- Synchronizing by Joining
+- Detaching Threads
+- Stopping Threads
+- Synchronizing with Mutexes
+- 
